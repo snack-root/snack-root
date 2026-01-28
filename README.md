@@ -10,14 +10,6 @@
   <img src="https://emojis.slackmojis.com/emojis/images/1643517239/32774/raichu.gif?1643517239" width="35" />
   Hey, I'm <strong>Đặng Vinh</strong> 👾  
 </h1>
-
-<p align="center">
-  <img src="https://i.pinimg.com/originals/80/b6/81/80b6810535bcff91ae3689c5da95cd50.gif" 
-       width="130" 
-       alt="Chibi Hacker" 
-       title="Vinh's little AI hacker assistant 👾"/>
-</p>
-
 <p align="center">
   <em>Red Team Operator • Offensive Security Enthusiast • CTF Player • Anime & Chibi Lover 💀✨</em>
 </p>
