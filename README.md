@@ -1,8 +1,7 @@
 <!-- 🌃 CYBERPUNK RED TEAM README :: NEON OPERATOR -->
 
 <h1 align="center">
-  <span style="color:#00ffe0">ĐẶNG</span>
-  <span style="color:#ff2bdc">VINH</span>
+  <span style="color:#00ffe0">SNACK</span>
 </h1>
 
 <p align="center">
