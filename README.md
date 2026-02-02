@@ -7,15 +7,15 @@
 
 <p align="center">
   <em style="color:#7df9ff">
-    Red Team Operator · Offensive Security · Adversary Emulation
+    Red Team Operator • Offensive Security • Adversary Emulation
   </em>
 </p>
 
-<!-- NEON STATUS / HUD INDICATORS -->
+<!-- NEON STATUS BADGES (LARGE & CLEAN) -->
 <p align="center">
-  <img src="https://img.shields.io/badge/ACTIVE-0b0b0b?style=flat-square&logo=ghost&logoColor=ff2bdc"/>
-  <img src="https://img.shields.io/badge/NEON%20CITY-0b0b0b?style=flat-square&logo=protonvpn&logoColor=00ffe0"/>
-  <img src="https://img.shields.io/badge/STEALTH-0b0b0b?style=flat-square&logo=matrix&logoColor=39ff14"/>
+  <img src="https://img.shields.io/badge/STATUS-ACTIVE-ff2bdc?style=for-the-badge&logo=ghost&logoColor=black"/>
+  <img src="https://img.shields.io/badge/ZONE-NEON%20CITY-00ffe0?style=for-the-badge&logo=protonvpn&logoColor=black"/>
+  <img src="https://img.shields.io/badge/MODE-STEALTH-39ff14?style=for-the-badge&logo=matrix&logoColor=black"/>
 </p>
 
 ---
@@ -40,13 +40,13 @@ I chase **control**.
 
 ## ⚔️ OPERATIONAL SPECTRUM
 
-<!-- MITRE :: HUD STYLE -->
+<!-- MITRE ATT&CK :: LARGE BADGES -->
 <p align="center">
-  <img src="https://img.shields.io/badge/IA-0b0b0b?style=flat-square&logo=mitre&logoColor=ff2bdc"/>
-  <img src="https://img.shields.io/badge/CA-0b0b0b?style=flat-square&logo=mitre&logoColor=00ffe0"/>
-  <img src="https://img.shields.io/badge/LM-0b0b0b?style=flat-square&logo=mitre&logoColor=7df9ff"/>
-  <img src="https://img.shields.io/badge/P-0b0b0b?style=flat-square&logo=mitre&logoColor=ff2bdc"/>
-  <img src="https://img.shields.io/badge/E-0b0b0b?style=flat-square&logo=mitre&logoColor=39ff14"/>
+  <img src="https://img.shields.io/badge/INITIAL%20ACCESS-ff2bdc?style=for-the-badge&logo=mitre&logoColor=black"/>
+  <img src="https://img.shields.io/badge/CREDENTIAL%20ACCESS-00ffe0?style=for-the-badge&logo=mitre&logoColor=black"/>
+  <img src="https://img.shields.io/badge/LATERAL%20MOVEMENT-7df9ff?style=for-the-badge&logo=mitre&logoColor=black"/>
+  <img src="https://img.shields.io/badge/PERSISTENCE-ff00ff?style=for-the-badge&logo=mitre&logoColor=black"/>
+  <img src="https://img.shields.io/badge/EVASION-39ff14?style=for-the-badge&logo=mitre&logoColor=black"/>
 </p>
 
 - Adversary emulation & intrusion operations  
@@ -59,43 +59,36 @@ I chase **control**.
 
 ## 🖥 SYSTEMS
 
-<!-- PLATFORMS :: NEON -->
 <p align="center">
-  <img src="https://img.shields.io/badge/AD-0b0b0b?style=flat-square&logo=windows&logoColor=00ffe0"/>
-  <img src="https://img.shields.io/badge/KALI-0b0b0b?style=flat-square&logo=kalilinux&logoColor=ff2bdc"/>
-  <img src="https://img.shields.io/badge/ARCH-0b0b0b?style=flat-square&logo=archlinux&logoColor=00ffe0"/>
+  <img src="https://img.shields.io/badge/WINDOWS%20AD-00ffe0?style=for-the-badge&logo=windows&logoColor=black"/>
+  <img src="https://img.shields.io/badge/KALI%20LINUX-ff2bdc?style=for-the-badge&logo=kalilinux&logoColor=black"/>
+  <img src="https://img.shields.io/badge/ARCH%20LINUX-00eaff?style=for-the-badge&logo=archlinux&logoColor=black"/>
 </p>
-
-Enterprise Windows by day.  
-Offensive Linux by night.
 
 ---
 
 ## 🧰 TOOLCHAIN
 
-<!-- TOOLS :: ICON-FIRST -->
 <p align="center">
-  <img src="https://img.shields.io/badge/MSF-0b0b0b?style=flat-square&logo=metasploit&logoColor=ff2bdc"/>
-  <img src="https://img.shields.io/badge/C2-0b0b0b?style=flat-square&logo=redhat&logoColor=7df9ff"/>
-  <img src="https://img.shields.io/badge/SLIVER-0b0b0b?style=flat-square&logo=go&logoColor=00ffe0"/>
-  <img src="https://img.shields.io/badge/AD-0b0b0b?style=flat-square&logo=python&logoColor=39ff14"/>
-  <img src="https://img.shields.io/badge/BH-0b0b0b?style=flat-square&logo=neo4j&logoColor=ff2bdc"/>
-  <img src="https://img.shields.io/badge/WEB-0b0b0b?style=flat-square&logo=burpsuite&logoColor=00ffe0"/>
+  <img src="https://img.shields.io/badge/METASPLOIT-ff2bdc?style=for-the-badge&logo=metasploit&logoColor=black"/>
+  <img src="https://img.shields.io/badge/COBALT%20STRIKE-7df9ff?style=for-the-badge&logo=redhat&logoColor=black"/>
+  <img src="https://img.shields.io/badge/SLIVER-00ffe0?style=for-the-badge&logo=go&logoColor=black"/>
+  <img src="https://img.shields.io/badge/IMPACKET-39ff14?style=for-the-badge&logo=python&logoColor=black"/>
+  <img src="https://img.shields.io/badge/BLOODHOUND-ff00ff?style=for-the-badge&logo=neo4j&logoColor=black"/>
 </p>
 
-Tools come and go.  
-Tradecraft survives.
+> Tools come and go.  
+> Tradecraft survives.
 
 ---
 
 ## 🧬 CAPABILITIES
 
-<!-- SKILLS :: HUD -->
 <p align="center">
-  <img src="https://img.shields.io/badge/PY-0b0b0b?style=flat-square&logo=python&logoColor=00ffe0"/>
-  <img src="https://img.shields.io/badge/SH-0b0b0b?style=flat-square&logo=gnu-bash&logoColor=ff2bdc"/>
-  <img src="https://img.shields.io/badge/CTF-0b0b0b?style=flat-square&logo=hackthebox&logoColor=7df9ff"/>
-  <img src="https://img.shields.io/badge/DOCKER-0b0b0b?style=flat-square&logo=docker&logoColor=00ffe0"/>
+  <img src="https://img.shields.io/badge/PYTHON-00ffe0?style=for-the-badge&logo=python&logoColor=black"/>
+  <img src="https://img.shields.io/badge/BASH-ff2bdc?style=for-the-badge&logo=gnu-bash&logoColor=black"/>
+  <img src="https://img.shields.io/badge/CTF-7df9ff?style=for-the-badge&logo=hackthebox&logoColor=black"/>
+  <img src="https://img.shields.io/badge/DOCKER-00eaff?style=for-the-badge&logo=docker&logoColor=black"/>
 </p>
 
 - Windows internals & authentication flows  
@@ -108,9 +101,9 @@ Tradecraft survives.
 ## 🧿 DOCTRINE
 
 <p align="center">
-  <img src="https://img.shields.io/badge/NOISE-CTRL-0b0b0b?style=flat-square&logoColor=39ff14"/>
-  <img src="https://img.shields.io/badge/TELEMETRY-EVADED-0b0b0b?style=flat-square&logoColor=ff2bdc"/>
-  <img src="https://img.shields.io/badge/DEFENDER-AWARE-0b0b0b?style=flat-square&logoColor=00ffe0"/>
+  <img src="https://img.shields.io/badge/NOISE-CONTROLLED-39ff14?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/TELEMETRY-EVADED-ff2bdc?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/DEFENDER-AWARE-00ffe0?style=for-the-badge"/>
 </p>
 
 In a city of glass, wires, and neon light —  
@@ -120,16 +113,15 @@ In a city of glass, wires, and neon light —
 
 ## 🌐 CONTACT
 
-<!-- COMMS :: NEON -->
 <p align="center">
-  <a href="https://github.com/DangVinh2005" target="_blank">
-    <img src="https://img.shields.io/badge/GH-0b0b0b?style=flat-square&logo=github&logoColor=00ffe0"/>
+  <a href="https://github.com/DangVinh2005">
+    <img src="https://img.shields.io/badge/GITHUB-00ffe0?style=for-the-badge&logo=github&logoColor=black"/>
   </a>
-  <a href="https://www.linkedin.com/in/dangvinh05/" target="_blank">
-    <img src="https://img.shields.io/badge/IN-0b0b0b?style=flat-square&logo=linkedin&logoColor=ff2bdc"/>
+  <a href="https://www.linkedin.com/in/dangvinh05/">
+    <img src="https://img.shields.io/badge/LINKEDIN-ff2bdc?style=for-the-badge&logo=linkedin&logoColor=black"/>
   </a>
-  <a href="mailto:dqv1507@gmail.com" target="_blank">
-    <img src="https://img.shields.io/badge/MAIL-0b0b0b?style=flat-square&logo=gmail&logoColor=7df9ff"/>
+  <a href="mailto:dqv1507@gmail.com">
+    <img src="https://img.shields.io/badge/EMAIL-7df9ff?style=for-the-badge&logo=gmail&logoColor=black"/>
   </a>
 </p>
 
