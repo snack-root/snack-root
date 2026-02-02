@@ -11,7 +11,7 @@
   Hey, I'm <strong>Đặng Vinh</strong> 👾  
 </h1>
 <p align="center">
-  <em>Red Team Operator • Offensive Security Enthusiast • CTF Player • Anime & Chibi Lover 💀✨</em>
+  <em>Red Team Operator • Offensive Security Enthusiast • CTF Player</em>
 </p>
 
 ---
