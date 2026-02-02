@@ -60,19 +60,6 @@ When not hacking, I’m usually:
 
 ---
 
-## 🎀 Anime & Chibi Customization
-
-<p align="center">
-  <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3JsbWlxZGNpZXpjbXJ0cWdsaG1kNTYwZ25qbXAxZjhwc3ltNzR3cyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8PBqNlzr8VrqHmYkR3/giphy.gif" 
-       width="180" 
-       alt="Chibi Hacker Girl" 
-       title="My cyber chibi companion 🌸"/>
-</p>
-
-> 🌸 *“Code can be elegant, even when it breaks things beautifully.”*  
-
----
-
 ## 🌐 Connect with Me
 
 <p align="center">
