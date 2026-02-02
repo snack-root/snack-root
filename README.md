@@ -1,7 +1,7 @@
 <!-- 🌃 CYBERPUNK RED TEAM README :: OPERATOR PROFILE -->
 
 <h1 align="center">
-  <span style="color:#00ffe0">SNACK</span>
+  <span style="color:#00ffe0">HI I'M SNACK</span>
 </h1>
 
 <p align="center">
