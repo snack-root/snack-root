@@ -1,105 +1,112 @@
-# Đặng Vinh
+<!-- 🌃 Cyberpunk Red Team README -->
+
+<h1 align="center">
+  <span style="color:#00ffe0">ĐẶNG</span>
+  <span style="color:#ff2bdc">VINH</span>
+</h1>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Role-Red%20Team%20Operator-0d0d0d?style=flat-square&logo=hackthebox&logoColor=00ffe0"/>
-  <img src="https://img.shields.io/badge/Discipline-Offensive%20Security-0d0d0d?style=flat-square&logo=kalilinux&logoColor=ff2bdc"/>
-  <img src="https://img.shields.io/badge/Mode-Adversary%20Emulation-0d0d0d?style=flat-square&logo=mitre&logoColor=00bfff"/>
+  <em style="color:#7df9ff">
+    Red Team Operator · Offensive Security · Adversary Emulation
+  </em>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Environment-Windows%20AD-0a0a0a?style=flat-square&logo=windows&logoColor=00eaff"/>
-  <img src="https://img.shields.io/badge/Platform-Linux-0a0a0a?style=flat-square&logo=linux&logoColor=ff00ff"/>
-  <img src="https://img.shields.io/badge/OPSEC-Stealth--First-0a0a0a?style=flat-square&logo=protonvpn&logoColor=39ff14"/>
+  <img src="https://img.shields.io/badge/STATUS-ACTIVE-ff2bdc?style=flat-square&logo=ghost&logoColor=white"/>
+  <img src="https://img.shields.io/badge/ZONE-NEON%20CITY-00ffe0?style=flat-square&logo=protonvpn&logoColor=black"/>
+  <img src="https://img.shields.io/badge/MODE-STEALTH-39ff14?style=flat-square&logo=matrix&logoColor=black"/>
 </p>
 
 ---
 
-## Profile
+## 🧠 PROFILE
 
-Cybersecurity operator navigating **hostile digital environments**  
-where identity, trust, and human error intersect.
+Cybersecurity operator navigating **neon-lit infrastructures**  
+where **identity**, **trust**, and **human error** collide.
 
-My focus is on **simulating advanced adversaries** inside enterprise networks —  
-abusing misconfigurations, weak assumptions, and invisible trust paths.
+I simulate **advanced adversaries** inside enterprise environments —  
+breaking assumptions, abusing trust paths, and vanishing before detection.
 
-I don’t chase exploits.  
-I chase **control**.
+I don’t scan for fun.  
+I **move with intent**.
 
 ---
 
-## Operational Spectrum
+## ⚔️ OPERATIONAL SPECTRUM
 
 <p align="center">
-  <img src="https://img.shields.io/badge/ATT%26CK-Initial%20Access-0f0f0f?style=flat-square&logo=mitre&logoColor=ff2bdc"/>
-  <img src="https://img.shields.io/badge/ATT%26CK-Credential%20Access-0f0f0f?style=flat-square&logo=mitre&logoColor=00ffe0"/>
-  <img src="https://img.shields.io/badge/ATT%26CK-Lateral%20Movement-0f0f0f?style=flat-square&logo=mitre&logoColor=00bfff"/>
-  <img src="https://img.shields.io/badge/ATT%26CK-Persistence-0f0f0f?style=flat-square&logo=mitre&logoColor=ff00ff"/>
-  <img src="https://img.shields.io/badge/ATT%26CK-Evasion-0f0f0f?style=flat-square&logo=mitre&logoColor=39ff14"/>
+  <img src="https://img.shields.io/badge/ATT%26CK-Initial%20Access-ff2bdc?style=flat-square&logo=mitre&logoColor=white"/>
+  <img src="https://img.shields.io/badge/ATT%26CK-Credential%20Access-00ffe0?style=flat-square&logo=mitre&logoColor=black"/>
+  <img src="https://img.shields.io/badge/ATT%26CK-Lateral%20Movement-7df9ff?style=flat-square&logo=mitre&logoColor=black"/>
+  <img src="https://img.shields.io/badge/ATT%26CK-Persistence-ff00ff?style=flat-square&logo=mitre&logoColor=white"/>
+  <img src="https://img.shields.io/badge/ATT%26CK-Evasion-39ff14?style=flat-square&logo=mitre&logoColor=black"/>
 </p>
 
-- Adversary emulation & intrusion operations  
-- Active Directory compromise & identity abuse  
+- Adversary emulation & intrusion ops  
+- Active Directory compromise  
 - Credential harvesting & privilege escalation  
 - Post-exploitation & lateral control  
-- Command-and-Control tradecraft  
+- Command-and-control tradecraft  
 
 ---
 
-## Technical Environment
+## 🖥 SYSTEMS
 
-### Systems
 <p>
-  <img src="https://img.shields.io/badge/Windows-Enterprise-050505?style=flat-square&logo=windows&logoColor=00eaff"/>
-  <img src="https://img.shields.io/badge/Linux-Kali%20%7C%20Arch-050505?style=flat-square&logo=linux&logoColor=ff2bdc"/>
-</p>
-
-### Tooling (mission-driven)
-<p>
-  <img src="https://img.shields.io/badge/Metasploit-Framework-0b0b0b?style=flat-square&logo=metasploit&logoColor=00ffe0"/>
-  <img src="https://img.shields.io/badge/Cobalt%20Strike-C2-0b0b0b?style=flat-square&logo=redhat&logoColor=ff2bdc"/>
-  <img src="https://img.shields.io/badge/Sliver-C2-0b0b0b?style=flat-square&logo=go&logoColor=00bfff"/>
-  <img src="https://img.shields.io/badge/Impacket-AD%20Abuse-0b0b0b?style=flat-square&logo=python&logoColor=39ff14"/>
-  <img src="https://img.shields.io/badge/BloodHound-Graph%20Intel-0b0b0b?style=flat-square&logo=neo4j&logoColor=ff00ff"/>
+  <img src="https://img.shields.io/badge/Windows-Active%20Directory-00eaff?style=flat-square&logo=windows&logoColor=black"/>
+  <img src="https://img.shields.io/badge/Linux-Kali%20%7C%20Arch-ff2bdc?style=flat-square&logo=linux&logoColor=white"/>
 </p>
 
 ---
 
-## Capabilities
+## 🧰 TOOLCHAIN
 
 <p>
-  <img src="https://img.shields.io/badge/Python-Automation-0e0e0e?style=flat-square&logo=python&logoColor=00ffe0"/>
-  <img src="https://img.shields.io/badge/Bash-Operator%20Scripting-0e0e0e?style=flat-square&logo=gnu-bash&logoColor=ff2bdc"/>
-  <img src="https://img.shields.io/badge/CTF-Offensive%20Labs-0e0e0e?style=flat-square&logo=hackthebox&logoColor=00bfff"/>
+  <img src="https://img.shields.io/badge/Metasploit-Framework-ff2bdc?style=flat-square&logo=metasploit&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Cobalt%20Strike-C2-7df9ff?style=flat-square&logo=redhat&logoColor=black"/>
+  <img src="https://img.shields.io/badge/Sliver-C2-00ffe0?style=flat-square&logo=go&logoColor=black"/>
+  <img src="https://img.shields.io/badge/Impacket-AD%20Abuse-39ff14?style=flat-square&logo=python&logoColor=black"/>
+  <img src="https://img.shields.io/badge/BloodHound-Graph%20Intel-ff00ff?style=flat-square&logo=neo4j&logoColor=white"/>
+</p>
+
+---
+
+## 🧬 CAPABILITIES
+
+<p>
+  <img src="https://img.shields.io/badge/Python-Automation-00ffe0?style=flat-square&logo=python&logoColor=black"/>
+  <img src="https://img.shields.io/badge/Bash-Operator%20Scripting-ff2bdc?style=flat-square&logo=gnu-bash&logoColor=white"/>
+  <img src="https://img.shields.io/badge/CTF-Offensive%20Labs-7df9ff?style=flat-square&logo=hackthebox&logoColor=black"/>
 </p>
 
 - Windows internals & authentication flows  
 - Linux systems & network fundamentals  
 - Payload execution & OPSEC discipline  
-- Automation for scale and precision  
+- Automation for speed & precision  
 
 ---
 
-## Doctrine
+## 🧿 DOCTRINE
 
 <p>
-  <img src="https://img.shields.io/badge/Noise-Controlled-050505?style=flat-square"/>
-  <img src="https://img.shields.io/badge/Telemetry-Evaded-050505?style=flat-square"/>
-  <img src="https://img.shields.io/badge/Assumption-Defender%20Aware-050505?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Noise-Controlled-39ff14?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Telemetry-Evaded-ff2bdc?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Assumption-Defender%20Aware-00ffe0?style=flat-square"/>
 </p>
 
-In a neon-lit system,  
-the quietest signal travels the farthest.
+In the city of neon,  
+**the quiet signal survives**.
 
 ---
 
-## Contact
+## 🌐 CONTACT
 
 <p>
-  <img src="https://img.shields.io/badge/GitHub-DangVinh2005-000000?style=flat-square&logo=github&logoColor=00ffe0"/>
-  <img src="https://img.shields.io/badge/LinkedIn-dangvinh05-000000?style=flat-square&logo=linkedin&logoColor=ff2bdc"/>
-  <img src="https://img.shields.io/badge/Email-dqv1507%40gmail.com-000000?style=flat-square&logo=gmail&logoColor=00bfff"/>
+  <img src="https://img.shields.io/badge/GitHub-DangVinh2005-7df9ff?style=flat-square&logo=github&logoColor=black"/>
+  <img src="https://img.shields.io/badge/LinkedIn-dangvinh05-ff2bdc?style=flat-square&logo=linkedin&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Email-dqv1507%40gmail.com-00ffe0?style=flat-square&logo=gmail&logoColor=black"/>
 </p>
 
 ---
 
-<sub>© Đặng Vinh · Red Team · Neon City</sub>
+<sub style="color:#7df9ff">© Đặng Vinh · Red Team · Neon District</sub>
