@@ -1,4 +1,4 @@
-<!-- 🌃 Cyberpunk Red Team README :: Neon HUD -->
+<!-- 🌃 CYBERPUNK RED TEAM README :: NEON OPERATOR -->
 
 <h1 align="center">
   <span style="color:#00ffe0">ĐẶNG</span>
@@ -11,7 +11,7 @@
   </em>
 </p>
 
-<!-- HUD STATUS (logo-centric, palette-synced) -->
+<!-- NEON STATUS / HUD INDICATORS -->
 <p align="center">
   <img src="https://img.shields.io/badge/ACTIVE-0b0b0b?style=flat-square&logo=ghost&logoColor=ff2bdc"/>
   <img src="https://img.shields.io/badge/NEON%20CITY-0b0b0b?style=flat-square&logo=protonvpn&logoColor=00ffe0"/>
@@ -22,24 +22,25 @@
 
 ## 🧠 PROFILE
 
-Cybersecurity operator operating in **neon-lit enterprise environments**,  
-where **identity**, **trust**, and **human error** intersect.
+The city never sleeps.  
+Neither do its networks.
 
-My work focuses on **emulating advanced adversaries** —  
-abusing implicit trust, exploiting misconfigurations, and navigating networks  
-with precision rather than noise.
+I operate inside **neon-lit enterprise infrastructures**,  
+where **identity systems trust too much**,  
+and **human error becomes an attack surface**.
 
-I prioritize **control over chaos**, **intent over automation**,  
-and **stealth over spectacle**.
+I emulate adversaries that move quietly —  
+abusing trust paths, bending assumptions,  
+and disappearing before alarms make sense.
 
-I don’t scan to be seen.  
-I move to **compromise**, **understand**, and **disappear**.
+I don’t chase noise.  
+I chase **control**.
 
 ---
 
 ## ⚔️ OPERATIONAL SPECTRUM
 
-<!-- MITRE HUD (short labels, icon-first) -->
+<!-- MITRE :: HUD STYLE -->
 <p align="center">
   <img src="https://img.shields.io/badge/IA-0b0b0b?style=flat-square&logo=mitre&logoColor=ff2bdc"/>
   <img src="https://img.shields.io/badge/CA-0b0b0b?style=flat-square&logo=mitre&logoColor=00ffe0"/>
@@ -48,28 +49,31 @@ I move to **compromise**, **understand**, and **disappear**.
   <img src="https://img.shields.io/badge/E-0b0b0b?style=flat-square&logo=mitre&logoColor=39ff14"/>
 </p>
 
-- Adversary emulation & intrusion ops  
+- Adversary emulation & intrusion operations  
 - Active Directory compromise  
 - Credential harvesting & privilege escalation  
-- Post-exploitation & lateral control  
+- Post-exploitation & lateral movement  
 - Command-and-control tradecraft  
 
 ---
 
 ## 🖥 SYSTEMS
 
-<!-- Systems (logo > text) -->
+<!-- PLATFORMS :: NEON -->
 <p align="center">
   <img src="https://img.shields.io/badge/AD-0b0b0b?style=flat-square&logo=windows&logoColor=00ffe0"/>
   <img src="https://img.shields.io/badge/KALI-0b0b0b?style=flat-square&logo=kalilinux&logoColor=ff2bdc"/>
   <img src="https://img.shields.io/badge/ARCH-0b0b0b?style=flat-square&logo=archlinux&logoColor=00ffe0"/>
 </p>
 
+Enterprise Windows by day.  
+Offensive Linux by night.
+
 ---
 
 ## 🧰 TOOLCHAIN
 
-<!-- Toolchain HUD (tight labels, icon-first) -->
+<!-- TOOLS :: ICON-FIRST -->
 <p align="center">
   <img src="https://img.shields.io/badge/MSF-0b0b0b?style=flat-square&logo=metasploit&logoColor=ff2bdc"/>
   <img src="https://img.shields.io/badge/C2-0b0b0b?style=flat-square&logo=redhat&logoColor=7df9ff"/>
@@ -79,13 +83,14 @@ I move to **compromise**, **understand**, and **disappear**.
   <img src="https://img.shields.io/badge/WEB-0b0b0b?style=flat-square&logo=burpsuite&logoColor=00ffe0"/>
 </p>
 
-> Tools are interchangeable. Tradecraft is not.
+Tools come and go.  
+Tradecraft survives.
 
 ---
 
 ## 🧬 CAPABILITIES
 
-<!-- Capabilities (logo-centric) -->
+<!-- SKILLS :: HUD -->
 <p align="center">
   <img src="https://img.shields.io/badge/PY-0b0b0b?style=flat-square&logo=python&logoColor=00ffe0"/>
   <img src="https://img.shields.io/badge/SH-0b0b0b?style=flat-square&logo=gnu-bash&logoColor=ff2bdc"/>
@@ -95,8 +100,8 @@ I move to **compromise**, **understand**, and **disappear**.
 
 - Windows internals & authentication flows  
 - Linux systems & network fundamentals  
-- Payload execution & OPSEC discipline  
-- Automation for speed & precision  
+- OPSEC-aware payload execution  
+- Automation for speed, silence, and scale  
 
 ---
 
@@ -108,14 +113,14 @@ I move to **compromise**, **understand**, and **disappear**.
   <img src="https://img.shields.io/badge/DEFENDER-AWARE-0b0b0b?style=flat-square&logoColor=00ffe0"/>
 </p>
 
-In the city of neon,  
-**the quiet signal survives**.
+In a city of glass, wires, and neon light —  
+**the quiet signal lives the longest**.
 
 ---
 
 ## 🌐 CONTACT
 
-<!-- Contact (logo-first) -->
+<!-- COMMS :: NEON -->
 <p align="center">
   <a href="https://github.com/DangVinh2005" target="_blank">
     <img src="https://img.shields.io/badge/GH-0b0b0b?style=flat-square&logo=github&logoColor=00ffe0"/>
@@ -130,4 +135,4 @@ In the city of neon,
 
 ---
 
-<sub style="color:#7df9ff">© Đặng Vinh · Red Team · Neon District</sub>
+<sub style="color:#7df9ff">© Đặng Vinh · Red Team · Neon City</sub>
