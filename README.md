@@ -1,7 +1,8 @@
 <!-- 🌃 Cyberpunk Red Team README -->
 
 <h1 align="center">
-  <span style="color:#00ffe0">SNACK</span>
+  <span style="color:#00ffe0">ĐẶNG</span>
+  <span style="color:#ff2bdc">VINH</span>
 </h1>
 
 <p align="center">
@@ -101,9 +102,9 @@ In the city of neon,
 ## 🌐 CONTACT
 
 <p>
-  <img src="https://img.shields.io/badge/GitHub7df9ff?style=flat-square&logo=github&logoColor=black"/>
-  <img src="https://img.shields.io/badge/LinkedInff2bdc?style=flat-square&logo=linkedin&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Email00ffe0?style=flat-square&logo=gmail&logoColor=black"/>
+  <img src="https://img.shields.io/badge/GitHub-DangVinh2005-7df9ff?style=flat-square&logo=github&logoColor=black"/>
+  <img src="https://img.shields.io/badge/LinkedIn-dangvinh05-ff2bdc?style=flat-square&logo=linkedin&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Email-dqv1507%40gmail.com-00ffe0?style=flat-square&logo=gmail&logoColor=black"/>
 </p>
 
 ---
