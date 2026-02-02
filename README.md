@@ -24,7 +24,6 @@ I enjoy researching **post-exploitation**, **Active Directory attacks**, and **b
 When not hacking, I’m usually:
 - 💣 Playing **CTFs**
 - 🧠 Writing **Python/Bash payloads**
-- 🎧 Listening to **Avicii** while coding exploits
 - 🎌 Creating **anime-style AI characters**
 
 > ⚔️ *"If you want to understand defenders, first think like an attacker."*
