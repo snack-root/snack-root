@@ -37,6 +37,7 @@ When not hacking, I’m usually:
 ![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 ![Kali Linux](https://img.shields.io/badge/Kali_Linux-557C94?style=for-the-badge&logo=kalilinux&logoColor=white)
 ![Arch Linux](https://img.shields.io/badge/Arch%20Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=fff)
+![Pop!_OS](https://img.shields.io/badge/OS-Pop!_OS-blue?logo=popos&logoColor=white)
 
 ### 💀 Red Team & Pentesting Tools
 ![Metasploit](https://img.shields.io/badge/Metasploit-272822?style=for-the-badge&logo=metasploit&logoColor=white)
