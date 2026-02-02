@@ -1,4 +1,4 @@
-<!-- 🌃 Cyberpunk Red Team README -->
+<!-- 🌃 Cyberpunk Red Team README :: Neon HUD -->
 
 <h1 align="center">
   <span style="color:#00ffe0">ĐẶNG</span>
@@ -11,35 +11,41 @@
   </em>
 </p>
 
+<!-- HUD STATUS (logo-centric, palette-synced) -->
 <p align="center">
-  <img src="https://img.shields.io/badge/STATUS-ACTIVE-ff2bdc?style=flat-square&logo=ghost&logoColor=white"/>
-  <img src="https://img.shields.io/badge/ZONE-NEON%20CITY-00ffe0?style=flat-square&logo=protonvpn&logoColor=black"/>
-  <img src="https://img.shields.io/badge/MODE-STEALTH-39ff14?style=flat-square&logo=matrix&logoColor=black"/>
+  <img src="https://img.shields.io/badge/ACTIVE-0b0b0b?style=flat-square&logo=ghost&logoColor=ff2bdc"/>
+  <img src="https://img.shields.io/badge/NEON%20CITY-0b0b0b?style=flat-square&logo=protonvpn&logoColor=00ffe0"/>
+  <img src="https://img.shields.io/badge/STEALTH-0b0b0b?style=flat-square&logo=matrix&logoColor=39ff14"/>
 </p>
 
 ---
 
 ## 🧠 PROFILE
 
-Cybersecurity operator navigating **neon-lit infrastructures**  
-where **identity**, **trust**, and **human error** collide.
+Cybersecurity operator operating in **neon-lit enterprise environments**,  
+where **identity**, **trust**, and **human error** intersect.
 
-I simulate **advanced adversaries** inside enterprise environments —  
-breaking assumptions, abusing trust paths, and vanishing before detection.
+My work focuses on **emulating advanced adversaries** —  
+abusing implicit trust, exploiting misconfigurations, and navigating networks  
+with precision rather than noise.
 
-I don’t scan for fun.  
-I **move with intent**.
+I prioritize **control over chaos**, **intent over automation**,  
+and **stealth over spectacle**.
+
+I don’t scan to be seen.  
+I move to **compromise**, **understand**, and **disappear**.
 
 ---
 
 ## ⚔️ OPERATIONAL SPECTRUM
 
+<!-- MITRE HUD (short labels, icon-first) -->
 <p align="center">
-  <img src="https://img.shields.io/badge/ATT%26CK-Initial%20Access-ff2bdc?style=flat-square&logo=mitre&logoColor=white"/>
-  <img src="https://img.shields.io/badge/ATT%26CK-Credential%20Access-00ffe0?style=flat-square&logo=mitre&logoColor=black"/>
-  <img src="https://img.shields.io/badge/ATT%26CK-Lateral%20Movement-7df9ff?style=flat-square&logo=mitre&logoColor=black"/>
-  <img src="https://img.shields.io/badge/ATT%26CK-Persistence-ff00ff?style=flat-square&logo=mitre&logoColor=white"/>
-  <img src="https://img.shields.io/badge/ATT%26CK-Evasion-39ff14?style=flat-square&logo=mitre&logoColor=black"/>
+  <img src="https://img.shields.io/badge/IA-0b0b0b?style=flat-square&logo=mitre&logoColor=ff2bdc"/>
+  <img src="https://img.shields.io/badge/CA-0b0b0b?style=flat-square&logo=mitre&logoColor=00ffe0"/>
+  <img src="https://img.shields.io/badge/LM-0b0b0b?style=flat-square&logo=mitre&logoColor=7df9ff"/>
+  <img src="https://img.shields.io/badge/P-0b0b0b?style=flat-square&logo=mitre&logoColor=ff2bdc"/>
+  <img src="https://img.shields.io/badge/E-0b0b0b?style=flat-square&logo=mitre&logoColor=39ff14"/>
 </p>
 
 - Adversary emulation & intrusion ops  
@@ -52,31 +58,39 @@ I **move with intent**.
 
 ## 🖥 SYSTEMS
 
-<p>
-  <img src="https://img.shields.io/badge/Windows-Active%20Directory-00eaff?style=flat-square&logo=windows&logoColor=black"/>
-  <img src="https://img.shields.io/badge/Linux-Kali%20%7C%20Arch-ff2bdc?style=flat-square&logo=linux&logoColor=white"/>
+<!-- Systems (logo > text) -->
+<p align="center">
+  <img src="https://img.shields.io/badge/AD-0b0b0b?style=flat-square&logo=windows&logoColor=00ffe0"/>
+  <img src="https://img.shields.io/badge/KALI-0b0b0b?style=flat-square&logo=kalilinux&logoColor=ff2bdc"/>
+  <img src="https://img.shields.io/badge/ARCH-0b0b0b?style=flat-square&logo=archlinux&logoColor=00ffe0"/>
 </p>
 
 ---
 
 ## 🧰 TOOLCHAIN
 
-<p>
-  <img src="https://img.shields.io/badge/Metasploit-Framework-ff2bdc?style=flat-square&logo=metasploit&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Cobalt%20Strike-C2-7df9ff?style=flat-square&logo=redhat&logoColor=black"/>
-  <img src="https://img.shields.io/badge/Sliver-C2-00ffe0?style=flat-square&logo=go&logoColor=black"/>
-  <img src="https://img.shields.io/badge/Impacket-AD%20Abuse-39ff14?style=flat-square&logo=python&logoColor=black"/>
-  <img src="https://img.shields.io/badge/BloodHound-Graph%20Intel-ff00ff?style=flat-square&logo=neo4j&logoColor=white"/>
+<!-- Toolchain HUD (tight labels, icon-first) -->
+<p align="center">
+  <img src="https://img.shields.io/badge/MSF-0b0b0b?style=flat-square&logo=metasploit&logoColor=ff2bdc"/>
+  <img src="https://img.shields.io/badge/C2-0b0b0b?style=flat-square&logo=redhat&logoColor=7df9ff"/>
+  <img src="https://img.shields.io/badge/SLIVER-0b0b0b?style=flat-square&logo=go&logoColor=00ffe0"/>
+  <img src="https://img.shields.io/badge/AD-0b0b0b?style=flat-square&logo=python&logoColor=39ff14"/>
+  <img src="https://img.shields.io/badge/BH-0b0b0b?style=flat-square&logo=neo4j&logoColor=ff2bdc"/>
+  <img src="https://img.shields.io/badge/WEB-0b0b0b?style=flat-square&logo=burpsuite&logoColor=00ffe0"/>
 </p>
+
+> Tools are interchangeable. Tradecraft is not.
 
 ---
 
 ## 🧬 CAPABILITIES
 
-<p>
-  <img src="https://img.shields.io/badge/Python-Automation-00ffe0?style=flat-square&logo=python&logoColor=black"/>
-  <img src="https://img.shields.io/badge/Bash-Operator%20Scripting-ff2bdc?style=flat-square&logo=gnu-bash&logoColor=white"/>
-  <img src="https://img.shields.io/badge/CTF-Offensive%20Labs-7df9ff?style=flat-square&logo=hackthebox&logoColor=black"/>
+<!-- Capabilities (logo-centric) -->
+<p align="center">
+  <img src="https://img.shields.io/badge/PY-0b0b0b?style=flat-square&logo=python&logoColor=00ffe0"/>
+  <img src="https://img.shields.io/badge/SH-0b0b0b?style=flat-square&logo=gnu-bash&logoColor=ff2bdc"/>
+  <img src="https://img.shields.io/badge/CTF-0b0b0b?style=flat-square&logo=hackthebox&logoColor=7df9ff"/>
+  <img src="https://img.shields.io/badge/DOCKER-0b0b0b?style=flat-square&logo=docker&logoColor=00ffe0"/>
 </p>
 
 - Windows internals & authentication flows  
@@ -88,10 +102,10 @@ I **move with intent**.
 
 ## 🧿 DOCTRINE
 
-<p>
-  <img src="https://img.shields.io/badge/Noise-Controlled-39ff14?style=flat-square"/>
-  <img src="https://img.shields.io/badge/Telemetry-Evaded-ff2bdc?style=flat-square"/>
-  <img src="https://img.shields.io/badge/Assumption-Defender%20Aware-00ffe0?style=flat-square"/>
+<p align="center">
+  <img src="https://img.shields.io/badge/NOISE-CTRL-0b0b0b?style=flat-square&logoColor=39ff14"/>
+  <img src="https://img.shields.io/badge/TELEMETRY-EVADED-0b0b0b?style=flat-square&logoColor=ff2bdc"/>
+  <img src="https://img.shields.io/badge/DEFENDER-AWARE-0b0b0b?style=flat-square&logoColor=00ffe0"/>
 </p>
 
 In the city of neon,  
@@ -101,10 +115,17 @@ In the city of neon,
 
 ## 🌐 CONTACT
 
-<p>
-  <img src="https://img.shields.io/badge/GitHub-DangVinh2005-7df9ff?style=flat-square&logo=github&logoColor=black"/>
-  <img src="https://img.shields.io/badge/LinkedIn-dangvinh05-ff2bdc?style=flat-square&logo=linkedin&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Email-dqv1507%40gmail.com-00ffe0?style=flat-square&logo=gmail&logoColor=black"/>
+<!-- Contact (logo-first) -->
+<p align="center">
+  <a href="https://github.com/DangVinh2005" target="_blank">
+    <img src="https://img.shields.io/badge/GH-0b0b0b?style=flat-square&logo=github&logoColor=00ffe0"/>
+  </a>
+  <a href="https://www.linkedin.com/in/dangvinh05/" target="_blank">
+    <img src="https://img.shields.io/badge/IN-0b0b0b?style=flat-square&logo=linkedin&logoColor=ff2bdc"/>
+  </a>
+  <a href="mailto:dqv1507@gmail.com" target="_blank">
+    <img src="https://img.shields.io/badge/MAIL-0b0b0b?style=flat-square&logo=gmail&logoColor=7df9ff"/>
+  </a>
 </p>
 
 ---
