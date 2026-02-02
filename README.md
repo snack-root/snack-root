@@ -1,97 +1,112 @@
-# TERMINAL HUD :: CYBERPUNK RED TEAM
+<!-- 🌃 Cyberpunk Red Team README -->
 
-```txt
-┌──────────────────────────────────────────────────────────────────────────────┐
-│   ███████╗███╗   ██╗ █████╗  ██████╗██╗  ██╗                               │
-│   ██╔════╝████╗  ██║██╔══██╗██╔════╝██║ ██╔╝                               │
-│   ███████╗██╔██╗ ██║███████║██║     █████╔╝                                │
-│   ╚════██║██║╚██╗██║██╔══██║██║     ██╔═██╗                                │
-│   ███████║██║ ╚████║██║  ██║╚██████╗██║  ██╗                               │
-│   ╚══════╝╚═╝  ╚═══╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝                               │
-│                                                                              │
-│   OPERATOR  : Đặng Vinh                                                      │
-│   CALLSIGN  : SNACK                                                          │
-│   ROLE      : Red Team Operator                                              │
-│   SECTOR    : Neon District                                                  │
-│                                                                              │
-│   SIGNAL    : CLEAN   |  NOISE : LOW   |  TRACE : MINIMIZED                  │
-└──────────────────────────────────────────────────────────────────────────────┘
-```
+<h1 align="center">
+  <span style="color:#00ffe0">ĐẶNG</span>
+  <span style="color:#ff2bdc">VINH</span>
+</h1>
 
-## SYSTEM READOUT
+<p align="center">
+  <em style="color:#7df9ff">
+    Red Team Operator · Offensive Security · Adversary Emulation
+  </em>
+</p>
 
-```txt
-snack@neon-terminal:~$ whoami
-dangvinh
+<p align="center">
+  <img src="https://img.shields.io/badge/STATUS-ACTIVE-ff2bdc?style=flat-square&logo=ghost&logoColor=white"/>
+  <img src="https://img.shields.io/badge/ZONE-NEON%20CITY-00ffe0?style=flat-square&logo=protonvpn&logoColor=black"/>
+  <img src="https://img.shields.io/badge/MODE-STEALTH-39ff14?style=flat-square&logo=matrix&logoColor=black"/>
+</p>
 
-snack@neon-terminal:~$ status
-[ENV]     Windows Active Directory | Linux (Kali / Arch / Pop!_OS)
-[FOCUS]   adversary emulation · enterprise intrusion simulation
-[OPSEC]   stealth-first · artifact-minimized
-[STATE]   active
-```
+---
 
-## PROFILE
+## 🧠 PROFILE
 
-```txt
-CALLSIGN "SNACK" operating inside hostile enterprise environments.
+Cybersecurity operator navigating **neon-lit infrastructures**  
+where **identity**, **trust**, and **human error** collide.
 
-Primary attack surfaces:
-- Identity systems
-- Trust relationships
-- Human and configuration error
+I simulate **advanced adversaries** inside enterprise environments —  
+breaking assumptions, abusing trust paths, and vanishing before detection.
 
-Objective:
-- Gain control
-- Maintain access
-- Exit clean
-```
+I don’t scan for fun.  
+I **move with intent**.
 
-I simulate real-world adversaries, not noisy tools.
-Understanding systems deeply matters more than exploiting them loudly.
+---
 
-## OPERATIONAL SPECTRUM (MITRE)
+## ⚔️ OPERATIONAL SPECTRUM
 
-- Initial Access
-- Credential Access
-- Lateral Movement
-- Persistence
-- Evasion
+<p align="center">
+  <img src="https://img.shields.io/badge/ATT%26CK-Initial%20Access-ff2bdc?style=flat-square&logo=mitre&logoColor=white"/>
+  <img src="https://img.shields.io/badge/ATT%26CK-Credential%20Access-00ffe0?style=flat-square&logo=mitre&logoColor=black"/>
+  <img src="https://img.shields.io/badge/ATT%26CK-Lateral%20Movement-7df9ff?style=flat-square&logo=mitre&logoColor=black"/>
+  <img src="https://img.shields.io/badge/ATT%26CK-Persistence-ff00ff?style=flat-square&logo=mitre&logoColor=white"/>
+  <img src="https://img.shields.io/badge/ATT%26CK-Evasion-39ff14?style=flat-square&logo=mitre&logoColor=black"/>
+</p>
 
-## SYSTEMS
+- Adversary emulation & intrusion ops  
+- Active Directory compromise  
+- Credential harvesting & privilege escalation  
+- Post-exploitation & lateral control  
+- Command-and-control tradecraft  
 
-- Windows Enterprise / Active Directory
-- Linux (Kali, Arch, Pop!_OS)
+---
 
-## TOOLCHAIN
+## 🖥 SYSTEMS
 
-- Metasploit Framework
-- Cobalt Strike
-- Sliver
-- Impacket
-- BloodHound
-- Burp Suite
-- Nmap
+<p>
+  <img src="https://img.shields.io/badge/Windows-Active%20Directory-00eaff?style=flat-square&logo=windows&logoColor=black"/>
+  <img src="https://img.shields.io/badge/Linux-Kali%20%7C%20Arch-ff2bdc?style=flat-square&logo=linux&logoColor=white"/>
+</p>
 
-## CAPABILITIES
+---
 
-- Python automation
-- Bash operator scripting
-- Windows internals & AD authentication
-- Linux systems & networking
-- OPSEC-aware payload execution
+## 🧰 TOOLCHAIN
 
-## DOCTRINE
+<p>
+  <img src="https://img.shields.io/badge/Metasploit-Framework-ff2bdc?style=flat-square&logo=metasploit&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Cobalt%20Strike-C2-7df9ff?style=flat-square&logo=redhat&logoColor=black"/>
+  <img src="https://img.shields.io/badge/Sliver-C2-00ffe0?style=flat-square&logo=go&logoColor=black"/>
+  <img src="https://img.shields.io/badge/Impacket-AD%20Abuse-39ff14?style=flat-square&logo=python&logoColor=black"/>
+  <img src="https://img.shields.io/badge/BloodHound-Graph%20Intel-ff00ff?style=flat-square&logo=neo4j&logoColor=white"/>
+</p>
 
-```txt
-In a city of neon systems,
-the quiet signal survives the longest.
-```
+---
 
-## CONTACT
+## 🧬 CAPABILITIES
 
-- GitHub: https://github.com/DangVinh2005
-- LinkedIn: https://www.linkedin.com/in/dangvinh05/
-- Email: dqv1507@gmail.com
+<p>
+  <img src="https://img.shields.io/badge/Python-Automation-00ffe0?style=flat-square&logo=python&logoColor=black"/>
+  <img src="https://img.shields.io/badge/Bash-Operator%20Scripting-ff2bdc?style=flat-square&logo=gnu-bash&logoColor=white"/>
+  <img src="https://img.shields.io/badge/CTF-Offensive%20Labs-7df9ff?style=flat-square&logo=hackthebox&logoColor=black"/>
+</p>
 
-© Đặng Vinh · CALLSIGN: SNACK · Terminal HUD Cyberpunk
+- Windows internals & authentication flows  
+- Linux systems & network fundamentals  
+- Payload execution & OPSEC discipline  
+- Automation for speed & precision  
+
+---
+
+## 🧿 DOCTRINE
+
+<p>
+  <img src="https://img.shields.io/badge/Noise-Controlled-39ff14?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Telemetry-Evaded-ff2bdc?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Assumption-Defender%20Aware-00ffe0?style=flat-square"/>
+</p>
+
+In the city of neon,  
+**the quiet signal survives**.
+
+---
+
+## 🌐 CONTACT
+
+<p>
+  <img src="https://img.shields.io/badge/GitHub-DangVinh2005-7df9ff?style=flat-square&logo=github&logoColor=black"/>
+  <img src="https://img.shields.io/badge/LinkedIn-dangvinh05-ff2bdc?style=flat-square&logo=linkedin&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Email-dqv1507%40gmail.com-00ffe0?style=flat-square&logo=gmail&logoColor=black"/>
+</p>
+
+---
+
+<sub style="color:#7df9ff">© Đặng Vinh · Red Team · Neon District</sub>
