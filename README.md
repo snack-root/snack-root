@@ -1,50 +1,49 @@
-<!-- Dark Minimal Red Team README -->
+# Đặng Vinh
 
-<h1 align="center">Đặng Vinh</h1>
-
-<p align="center">
-  <em>Red Team Operator · Offensive Security · CTF Player</em>
-</p>
-
-<p align="center">
-  <a href="https://www.linkedin.com/in/dangvinh05/">LinkedIn</a> ·
-  <a href="mailto:dqv1507@gmail.com">Email</a> ·
-  <a href="https://github.com/DangVinh2005">GitHub</a>
-</p>
+Red Team Operator  
+Offensive Security · Adversary Emulation · CTF
 
 ---
 
-## About
+## Profile
 
-I'm **Vinh Dang**, a cybersecurity practitioner with a strong focus on **offensive security** and **Red Team operations**.
+Cybersecurity practitioner focused on **realistic adversary behavior** in enterprise environments.
 
-My interests revolve around understanding how modern enterprise environments fail under real-world attacks, especially in **Active Directory**, **Windows internals**, and **post-exploitation workflows**.
+My work centers on how modern Windows domains, identity systems, and networked services fail under targeted intrusion scenarios.  
+I prioritize **stealth, reliability, and operator tradecraft** over tool-driven noise.
 
-I enjoy turning theory into practice by building tools, breaking assumptions, and learning through hands-on challenges.
-
-> *Think like an attacker. Act with precision.*
+I build, break, automate, and document.
 
 ---
 
-## Focus Areas
+## Core Interests
 
-- Red Team operations & adversary emulation  
-- Active Directory attacks & privilege escalation  
+- Adversary emulation & intrusion simulation  
+- Active Directory compromise & trust abuse  
+- Credential access & privilege escalation  
 - Post-exploitation & lateral movement  
-- Custom tooling & exploit development  
-- Capture The Flag (CTF) competitions  
+- Command-and-control tradecraft  
+- Custom tooling & payload engineering  
 
 ---
 
-## Technical Stack
+## Operational Approach
 
-### Operating Systems
-- Windows (Enterprise / AD environments)
-- Kali Linux
-- Arch Linux
-- Pop!_OS
+- Assume defenders are competent  
+- Minimize artifacts and telemetry  
+- Prefer native capabilities over implants  
+- Automate repetitive actions  
+- Document everything  
 
-### Red Team & Offensive Tooling
+---
+
+## Technical Environment
+
+### Platforms
+- Windows (Enterprise / Active Directory)
+- Linux (Kali, Arch, Pop!_OS)
+
+### Tooling (as needed)
 - Metasploit Framework  
 - Cobalt Strike  
 - Sliver  
@@ -56,37 +55,39 @@ I enjoy turning theory into practice by building tools, breaking assumptions, an
 - Empire  
 - Docker  
 
+Tools are interchangeable.  
+Understanding is not.
+
 ---
 
-## Skills Snapshot
+## Capabilities
 
 - **Languages:** Python, Bash  
-- **Domains:** Active Directory, Network Security, Linux, Windows Internals  
-- **Mindset:** Offensive-first, automation-driven, stealth-oriented  
+- **Domains:** Active Directory, Windows Internals, Linux, Networking  
+- **Tactics:** Initial Access, Credential Access, Lateral Movement, Persistence, Evasion  
 
 ---
 
 ## Philosophy
 
-Security is not about tools —  
-it’s about **understanding systems deeply enough to break them**.
+Security fails at the seams between systems.
 
-I believe:
-- Real defense comes from real attacks  
-- Automation beats repetition  
-- Simplicity beats noise  
+Effective Red Team work is:
+- Quiet  
+- Intentional  
+- Measurable  
+
+Offense exists to improve defense —  
+but only when it is done seriously.
 
 ---
 
 ## Contact
 
-If you’re interested in:
-- Red Team discussions  
-- CTF collaboration  
-- Security research  
-
-Feel free to reach out.
+- GitHub: https://github.com/DangVinh2005  
+- LinkedIn: https://www.linkedin.com/in/dangvinh05  
+- Email: dqv1507@gmail.com  
 
 ---
 
-<sub>© Đặng Vinh — stay sharp, stay curious.</sub>
+<sub>© Đặng Vinh</sub>
