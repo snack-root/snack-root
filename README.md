@@ -1,4 +1,8 @@
-<!-- ███ CYBERPUNK RED TEAM PROFILE ███ -->
+<!-- 🌃 CYBERPUNK RED TEAM README :: OPERATOR PROFILE -->
+
+<p align="center">
+  <img src="https://i.postimg.cc/85KDgS5b/neon-banner.jpg" width="100%" alt="Neon HUD Banner - SNACK" />
+</p>
 
 <h1 align="center">
   <span style="color:#00ffe0">⛧ 𝙎𝙉𝘼𝘾𝙆 ⛧</span>
@@ -10,7 +14,6 @@
   </em>
 </p>
 
-<!-- CORE STATUS (clean & premium) -->
 <p align="center">
   <img src="https://img.shields.io/badge/ACTIVE-ff2bdc?style=for-the-badge&logo=ghost&logoColor=black"/>
   <img src="https://img.shields.io/badge/RED%20TEAM-00ffe0?style=for-the-badge&logo=kalilinux&logoColor=black"/>
@@ -73,6 +76,7 @@ Attack surface by night.
   <img src="https://img.shields.io/badge/BloodHound-ff00ff?style=for-the-badge&logo=neo4j&logoColor=black"/>
   <img src="https://img.shields.io/badge/Nmap-7df9ff?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/Burp-ff8c00?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Docker-00eaff?style=for-the-badge&logo=docker&logoColor=black"/>
 </p>
 
 Tools change.  
@@ -85,7 +89,6 @@ Tradecraft stays.
 <p align="center">
   <img src="https://img.shields.io/badge/Python-00ffe0?style=for-the-badge&logo=python&logoColor=black"/>
   <img src="https://img.shields.io/badge/Bash-ff2bdc?style=for-the-badge&logo=gnu-bash&logoColor=black"/>
-  <img src="https://img.shields.io/badge/Docker-7df9ff?style=for-the-badge&logo=docker&logoColor=black"/>
 </p>
 
 Automation • Scripting • Lab building
