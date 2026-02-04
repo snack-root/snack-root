@@ -1,111 +1,122 @@
-<!-- ███ CYBERPUNK RED TEAM PROFILE ███ -->
-
-<h1 align="center">
-  <span style="color:#00ffe0">⛧ 𝙎𝙉𝘼𝘾𝙆 ⛧</span>
-</h1>
+<!-- █████ CYBERPUNK RED TEAM OPERATOR README █████ -->
 
 <p align="center">
-  <em style="color:#7df9ff">
-    Red Team Operator • Offensive Security • CTF
-  </em>
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&pause=1000&color=00FFE0&center=true&vCenter=true&width=900&lines=SNACK+-+Red+Team+Operator;Offensive+Security+%7C+Adversary+Emulation;Break+Systems+.+.+.Learn+.+.+.Repeat;Less+Noise+%E2%80%A2+More+Control" />
 </p>
 
-<!-- CORE STATUS (clean & premium) -->
 <p align="center">
-  <img src="https://img.shields.io/badge/ACTIVE-ff2bdc?style=for-the-badge&logo=ghost&logoColor=black"/>
-  <img src="https://img.shields.io/badge/RED%20TEAM-00ffe0?style=for-the-badge&logo=kalilinux&logoColor=black"/>
-  <img src="https://img.shields.io/badge/STEALTH-39ff14?style=for-the-badge&logo=protonvpn&logoColor=black"/>
+███████╗███╗   ██╗ █████╗  ██████╗██╗  ██╗
+██╔════╝████╗  ██║██╔══██╗██╔════╝██║ ██╔╝
+███████╗██╔██╗ ██║███████║██║     █████╔╝
+╚════██║██║╚██╗██║██╔══██║██║     ██╔═██╗
+███████║██║ ╚████║██║  ██║╚██████╗██║  ██╗
+╚══════╝╚═╝  ╚═══╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝
 </p>
 
----
-
-## 🧠 PROFILE
-
-Operating inside **enterprise networks and self-built labs**,  
-focused on **offensive tradecraft**, not tool collection.
-
-I study how systems fail —
-how trust is abused,
-how identity breaks,
-and how small mistakes become full compromise.
-
-Less noise.  
-More control.
-
----
-
-## ⚔️ TRADECRAFT
+<h3 align="center">⛧ RED TEAM • OFFENSIVE SECURITY • CTF ⛧</h3>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Active%20Directory-00ffe0?style=for-the-badge&logo=windows&logoColor=black"/>
-  <img src="https://img.shields.io/badge/Post--Exploitation-ff2bdc?style=for-the-badge&logo=mitre&logoColor=black"/>
-  <img src="https://img.shields.io/badge/Lateral%20Movement-7df9ff?style=for-the-badge&logo=mitre&logoColor=black"/>
-  <img src="https://img.shields.io/badge/CTF%20Practice-ff00ff?style=for-the-badge&logo=hackthebox&logoColor=black"/>
-</p>
-
-- Adversary emulation  
-- AD abuse & privilege escalation  
-- Credential operations  
-- OPSEC-aware post exploitation  
-- Continuous learning through CTFs & labs  
-
----
-
-## 🖥 ENVIRONMENT
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Arch-00eaff?style=for-the-badge&logo=archlinux&logoColor=black"/>
-  <img src="https://img.shields.io/badge/Pop!__OS-7df9ff?style=for-the-badge&logo=popos&logoColor=black"/>
-  <img src="https://img.shields.io/badge/Kali-ff2bdc?style=for-the-badge&logo=kalilinux&logoColor=black"/>
-  <img src="https://img.shields.io/badge/Windows%20AD-00ffe0?style=for-the-badge&logo=windows&logoColor=black"/>
-</p>
-
-Daily driver by day.  
-Attack surface by night.
-
----
-
-## 🧰 TOOLSET
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Metasploit-ff2bdc?style=for-the-badge&logo=metasploit&logoColor=black"/>
-  <img src="https://img.shields.io/badge/Impacket-00ffe0?style=for-the-badge&logo=python&logoColor=black"/>
-  <img src="https://img.shields.io/badge/BloodHound-ff00ff?style=for-the-badge&logo=neo4j&logoColor=black"/>
-  <img src="https://img.shields.io/badge/Nmap-7df9ff?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Burp-ff8c00?style=for-the-badge"/>
-</p>
-
-Tools change.  
-Tradecraft stays.
-
----
-
-## 🧬 STACK
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-00ffe0?style=for-the-badge&logo=python&logoColor=black"/>
-  <img src="https://img.shields.io/badge/Bash-ff2bdc?style=for-the-badge&logo=gnu-bash&logoColor=black"/>
-  <img src="https://img.shields.io/badge/Docker-7df9ff?style=for-the-badge&logo=docker&logoColor=black"/>
-</p>
-
-Automation • Scripting • Lab building
-
----
-
-## 🌐 CONTACT
-
-<p align="center">
-  <a href="https://github.com/DangVinh2005">
-    <img src="https://img.shields.io/badge/GitHub-00ffe0?style=for-the-badge&logo=github&logoColor=black"/>
-  </a>
-  <a href="https://www.linkedin.com/in/dangvinh05/">
-    <img src="https://img.shields.io/badge/LinkedIn-ff2bdc?style=for-the-badge&logo=linkedin&logoColor=black"/>
-  </a>
-  <a href="mailto:dqv1507@gmail.com">
-    <img src="https://img.shields.io/badge/Email-7df9ff?style=for-the-badge&logo=gmail&logoColor=black"/>
-  </a>
+  <img src="https://img.shields.io/badge/STATUS-ACTIVE-ff2bdc?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/ROLE-RED%20TEAM-00ffe0?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/OPSEC-ENABLED-39ff14?style=for-the-badge"/>
 </p>
 
 ---
 
-<sub style="color:#7df9ff">⛧ SNACK • Red Team • Neon City ⛧</sub>
+```bash
+> booting operator profile...
+> loading tradecraft modules...
+> connecting to lab network...
+> access granted
+```
+
+# 🧠 whoami
+
+```bash
+snack@neon-city:~$ whoami
+Red Team Operator
+Offensive Security Student
+CTF Player
+Kernel tinkerer
+```
+
+I build labs.  
+I break systems.  
+I learn why they fail.
+
+Less noise. More control.
+
+---
+
+# ⚔️ TRADECRAFT
+
+```
+Active Directory abuse
+Privilege escalation
+Credential operations
+Lateral movement
+Post exploitation
+Detection evasion
+CTF exploitation
+```
+
+---
+
+# 🔥 PROJECTS
+
+## SOC-Hardened Linux
+- eBPF LSM security agent
+- Kernel-level monitoring
+- Loki + SIEM integration
+
+## Red Team Lab
+- Full AD domain
+- BloodHound attack paths
+- Kill chain simulations
+
+## CTF Tooling
+- Crypto solvers
+- Pwntools exploits
+- Automation scripts
+
+---
+
+# 🧰 ARSENAL
+
+### Offensive
+Metasploit • Impacket • BloodHound • CME • Nmap • Burp • Hashcat
+
+### Engineering
+Python • Bash • Docker • eBPF • Linux internals
+
+### Platforms
+Arch • Pop!_OS • Kali • Windows AD • VMware
+
+---
+
+# 📊 ACTIVITY
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=DangVinh2005&show_icons=true&theme=radical&hide_border=true"/>
+  <img src="https://github-readme-streak-stats.herokuapp.com?user=DangVinh2005&theme=radical&hide_border=true"/>
+</p>
+
+---
+
+# 🐍 CONTRIBUTION TRACE
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/DangVinh2005/DangVinh2005/output/github-contribution-grid-snake.svg"/>
+</p>
+
+---
+
+# 🌐 CONTACT
+
+GitHub • LinkedIn • Email
+
+---
+
+<p align="center">
+⛧ snack@neon-city — stay stealthy ⛧
+</p>
