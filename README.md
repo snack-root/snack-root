@@ -1,7 +1,7 @@
 <!-- 🌃 CYBERPUNK RED TEAM README :: OPERATOR PROFILE -->
 
 <p align="center">
-  <img src="https://i.postimg.cc/85KDgS5b/neon-banner.jpg" width="100%" alt="Neon HUD Banner - SNACK" />
+  <img src="./assets/neon-banner.svg" width="100%" alt="Neon HUD Banner - SNACK" />
 </p>
 
 <h1 align="center">
