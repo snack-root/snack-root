@@ -17,6 +17,30 @@
       <stop offset="1" stop-color="#ff2bdc"/>
     </linearGradient>
 
+    <linearGradient id="haze" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.0"/>
+      <stop offset="0.35" stop-color="#000000" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.78"/>
+    </linearGradient>
+
+    <linearGradient id="sweep" x1="-0.2" y1="0" x2="1.2" y2="0">
+      <stop offset="0" stop-color="#00ffe0" stop-opacity="0"/>
+      <stop offset="0.45" stop-color="#00ffe0" stop-opacity="0.0"/>
+      <stop offset="0.55" stop-color="#00ffe0" stop-opacity="0.22"/>
+      <stop offset="0.65" stop-color="#ff2bdc" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#ff2bdc" stop-opacity="0"/>
+      <animate attributeName="x1" dur="3.4s" values="-1;1" repeatCount="indefinite"/>
+      <animate attributeName="x2" dur="3.4s" values="0;2" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <linearGradient id="shineGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.45" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.55" stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="0.65" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
     <filter id="glowCyan" x="-40%" y="-40%" width="180%" height="180%">
       <feGaussianBlur stdDeviation="3" result="b"/>
       <feColorMatrix in="b" type="matrix"
@@ -29,7 +53,6 @@
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
-
     <filter id="glowPink" x="-40%" y="-40%" width="180%" height="180%">
       <feGaussianBlur stdDeviation="3.2" result="b"/>
       <feColorMatrix in="b" type="matrix"
@@ -44,7 +67,7 @@
     </filter>
 
     <filter id="noise">
-      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" />
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
       <feColorMatrix type="matrix"
         values="0 0 0 0 1
                 0 0 0 0 1
@@ -91,23 +114,17 @@
       </feMerge>
     </filter>
 
-    <linearGradient id="shineGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
-      <stop offset="0.45" stop-color="#ffffff" stop-opacity="0"/>
-      <stop offset="0.55" stop-color="#ffffff" stop-opacity="0.35"/>
-      <stop offset="0.65" stop-color="#ffffff" stop-opacity="0"/>
-      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
-    </linearGradient>
+    <!-- Rain + particles are clipped so they won't cover SNACK -->
+    <clipPath id="fxClipTop">
+      <rect x="0" y="0" width="1200" height="228"/>
+    </clipPath>
 
-    <linearGradient id="sweep" x1="-0.2" y1="0" x2="1.2" y2="0">
-      <stop offset="0" stop-color="#00ffe0" stop-opacity="0"/>
-      <stop offset="0.45" stop-color="#00ffe0" stop-opacity="0.0"/>
-      <stop offset="0.55" stop-color="#00ffe0" stop-opacity="0.22"/>
-      <stop offset="0.65" stop-color="#ff2bdc" stop-opacity="0.18"/>
-      <stop offset="1" stop-color="#ff2bdc" stop-opacity="0"/>
-      <animate attributeName="x1" dur="3.4s" values="-1;1" repeatCount="indefinite"/>
-      <animate attributeName="x2" dur="3.4s" values="0;2" repeatCount="indefinite"/>
-    </linearGradient>
+    <!-- Rain: diagonal streak pattern -->
+    <pattern id="rainPattern" width="18" height="28" patternUnits="userSpaceOnUse">
+      <path d="M14 -2 L6 18" stroke="#b9fff6" stroke-opacity="0.18" stroke-width="1.4"/>
+      <path d="M4 6 L-2 20" stroke="#ff7af0" stroke-opacity="0.10" stroke-width="1.2"/>
+      <path d="M18 10 L10 30" stroke="#00ffe0" stroke-opacity="0.10" stroke-width="1.2"/>
+    </pattern>
 
     <style>
       .title {
@@ -122,10 +139,12 @@
     </style>
   </defs>
 
+  <!-- Base -->
   <rect width="1200" height="320" fill="url(#bg)"/>
   <rect width="1200" height="320" filter="url(#noise)" opacity="0.9"/>
   <rect width="1200" height="320" fill="url(#grid)" opacity="0.9"/>
 
+  <!-- Diagonal neon streaks -->
   <g opacity="0.45">
     <path d="M-50 300 L420 -20" stroke="url(#neonCyan)" stroke-width="2" opacity="0.55"/>
     <path d="M120 360 L610 -20" stroke="url(#neonPink)" stroke-width="2" opacity="0.35"/>
@@ -133,20 +152,195 @@
     <path d="M820 360 L1280 -20" stroke="url(#neonPink)" stroke-width="2" opacity="0.25"/>
   </g>
 
-  <g opacity="0.9">
-    <path d="M40 50 H130" stroke="url(#neonCyan)" stroke-width="3" filter="url(#glowCyan)"/>
-    <path d="M40 50 V120" stroke="url(#neonCyan)" stroke-width="3" filter="url(#glowCyan)"/>
-    <path d="M1160 270 H1070" stroke="url(#neonPink)" stroke-width="3" filter="url(#glowPink)"/>
-    <path d="M1160 270 V200" stroke="url(#neonPink)" stroke-width="3" filter="url(#glowPink)"/>
+  <!-- CITYSCAPE -->
+  <g opacity="0.98">
+    <g opacity="0.35">
+      <path d="M0 320V252
+               H52 V226 H78 V252 H122 V212 H148 V252 H200 V234 H228 V252
+               H276 V206 H312 V252 H348 V228 H372 V252
+               H430 V196 H462 V252 H502 V220 H530 V252
+               H590 V210 H620 V252 H672 V198 H708 V252
+               H760 V224 H790 V252 H846 V190 H882 V252
+               H940 V214 H970 V252 H1030 V200 H1066 V252
+               H1126 V228 H1160 V252 H1200 V236 V320 Z"
+            fill="rgba(0,0,0,0.75)"/>
+      <path d="M430 196 V166 M430 166 h18
+               M846 190 V158 M846 158 h22
+               M1030 200 V170 M1030 170 h16"
+            stroke="#00ffe0" stroke-opacity="0.12" stroke-width="2" fill="none"/>
+    </g>
+
+    <g opacity="0.62">
+      <path d="M0 320V268
+               H40 V236 H64 V268 H96 V216 H130 V268
+               H170 V244 H198 V268
+               H238 V206 H274 V268
+               H314 V232 H340 V268
+               H378 V198 H420 V268
+               H462 V242 H490 V268
+               H528 V190 H572 V268
+               H612 V228 H642 V268
+               H680 V204 H718 V268
+               H754 V238 H784 V268
+               H820 V200 H866 V268
+               H906 V240 H936 V268
+               H972 V210 H1010 V268
+               H1046 V238 H1072 V268
+               H1110 V206 H1152 V268
+               H1200 V250 V320 Z"
+            fill="rgba(0,0,0,0.82)"/>
+      <path d="M378 198 V268 M528 190 V268 M820 200 V268 M1110 206 V268"
+            stroke="url(#neonCyan)" stroke-opacity="0.15" stroke-width="3" fill="none"/>
+      <path d="M238 206 V268 M680 204 V268 M972 210 V268"
+            stroke="url(#neonPink)" stroke-opacity="0.12" stroke-width="3" fill="none"/>
+    </g>
+
+    <g opacity="0.88">
+      <path d="M0 320V278
+               H26 V250 H56 V278
+               H88 V230 H124 V278
+               H154 V256 H186 V278
+               H220 V218 H258 V278
+               H294 V250 H322 V278
+               H356 V234 H392 V278
+               H426 V260 H454 V278
+               H488 V214 H528 V278
+               H560 V248 H590 V278
+               H624 V228 H662 V278
+               H694 V258 H724 V278
+               H760 V220 H802 V278
+               H836 V252 H864 V278
+               H898 V232 H936 V278
+               H970 V260 H998 V278
+               H1032 V216 H1074 V278
+               H1108 V248 H1140 V278
+               H1200 V262 V320 Z"
+            fill="rgba(0,0,0,0.90)"/>
+    </g>
+
+    <g opacity="0.9">
+      <g stroke="#00ffe0" stroke-opacity="0.18" stroke-width="3">
+        <path d="M102 246 h10 M102 256 h10 M102 266 h10
+                 M240 238 h10 M240 248 h10 M240 258 h10
+                 M506 238 h12 M506 250 h12 M506 262 h12
+                 M774 238 h12 M774 250 h12 M774 262 h12
+                 M1050 238 h12 M1050 250 h12 M1050 262 h12"/>
+      </g>
+      <animate attributeName="opacity" dur="2.2s" values="0.35;0.95;0.45;0.85;0.35" repeatCount="indefinite"/>
+    </g>
+
+    <g opacity="0.95">
+      <g transform="translate(160 236)">
+        <rect width="70" height="22" rx="7" fill="rgba(0,0,0,0.38)" stroke="url(#neonCyan)" stroke-opacity="0.5" filter="url(#glowCyan)"/>
+        <path d="M14 6 H56 M18 11 H52 M16 16 H54" stroke="#00ffe0" stroke-opacity="0.35" stroke-width="2"/>
+        <animate attributeName="opacity" dur="2.6s" values="0.75;1;0.8;1;0.75" repeatCount="indefinite"/>
+      </g>
+
+      <g transform="translate(940 212)">
+        <rect width="28" height="64" rx="8" fill="rgba(0,0,0,0.32)" stroke="url(#neonPink)" stroke-opacity="0.45" filter="url(#glowPink)"/>
+        <path d="M8 14 H20 M8 26 H20 M8 38 H20 M8 50 H20" stroke="#ff7af0" stroke-opacity="0.35" stroke-width="2"/>
+        <animate attributeName="opacity" dur="1.9s" values="0.7;1;0.78;1;0.7" repeatCount="indefinite"/>
+      </g>
+
+      <g transform="translate(520 244)">
+        <rect width="150" height="20" rx="7" fill="rgba(0,0,0,0.32)" stroke="url(#neonPink)" stroke-opacity="0.32" filter="url(#glowPink)"/>
+        <path d="M12 13 H138" stroke="#ff7af0" stroke-opacity="0.28" stroke-width="2"/>
+        <path d="M12 7 H88" stroke="#ff7af0" stroke-opacity="0.18" stroke-width="2"/>
+        <animate attributeName="opacity" dur="2.3s" values="0.65;1;0.72;1;0.65" repeatCount="indefinite"/>
+      </g>
+    </g>
+
+    <rect x="0" y="190" width="1200" height="130" fill="url(#haze)" opacity="0.62"/>
   </g>
 
+  <!-- Drone/Aircar (subtle; below HUD area) -->
+  <g opacity="0.9">
+    <g transform="translate(-160 238)">
+      <animateTransform attributeName="transform" type="translate" dur="10s"
+        values="-160 238; 1360 238" repeatCount="indefinite"/>
+      <path d="M20 14 C42 2, 86 2, 108 14
+               L132 16 C140 17, 140 25, 132 26
+               L108 28 C86 40, 42 40, 20 28
+               L6 26 C-2 25, -2 17, 6 16 Z"
+            fill="rgba(0,0,0,0.55)" stroke="#00ffe0" stroke-opacity="0.28" filter="url(#glowCyan)"/>
+      <path d="M52 14 C62 8, 78 8, 88 14 L82 22 C74 26, 66 26, 58 22 Z"
+            fill="rgba(0,255,224,0.10)" stroke="#00ffe0" stroke-opacity="0.28"/>
+      <circle cx="22" cy="22" r="3" fill="#00ffe0" opacity="0.45"/>
+      <circle cx="106" cy="22" r="3" fill="#00ffe0" opacity="0.45"/>
+      <path d="M22 26 v10 M106 26 v10" stroke="#00ffe0" stroke-opacity="0.18" stroke-width="2"/>
+      <animateTransform attributeName="transform" additive="sum" type="translate" dur="1.8s"
+        values="0 0; 0 -2; 0 0; 0 2; 0 0" repeatCount="indefinite"/>
+    </g>
+
+    <g transform="translate(1360 246)">
+      <animateTransform attributeName="transform" type="translate" dur="12.5s"
+        values="1360 246; -220 246" repeatCount="indefinite"/>
+      <circle cx="0" cy="0" r="7" fill="rgba(0,0,0,0.5)" stroke="#ff2bdc" stroke-opacity="0.28" filter="url(#glowPink)"/>
+      <path d="M-18 0 H-8 M8 0 H18" stroke="#ff7af0" stroke-opacity="0.38" stroke-width="2"/>
+      <circle cx="0" cy="0" r="2.2" fill="#ff7af0" opacity="0.65"/>
+      <path d="M0 7 v10" stroke="#ff7af0" stroke-opacity="0.18" stroke-width="2"/>
+      <animateTransform attributeName="transform" additive="sum" type="translate" dur="2.4s"
+        values="0 0; 0 -1.5; 0 0; 0 1.5; 0 0" repeatCount="indefinite"/>
+    </g>
+  </g>
+
+  <!-- Rain + Hologram particles (CLIPPED so they don't cover SNACK) -->
+  <g clip-path="url(#fxClipTop)">
+    <!-- Rain sheet -->
+    <g opacity="0.9">
+      <rect x="0" y="-40" width="1200" height="320" fill="url(#rainPattern)" opacity="0.55">
+        <animate attributeName="y" dur="0.9s" values="-40;0" repeatCount="indefinite"/>
+      </rect>
+      <rect x="0" y="-60" width="1200" height="320" fill="url(#rainPattern)" opacity="0.30">
+        <animate attributeName="y" dur="1.25s" values="-60;0" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <!-- Hologram particles -->
+    <g opacity="0.85">
+      <!-- cyan particles -->
+      <g filter="url(#glowCyan)">
+        <circle cx="120" cy="70" r="1.8" fill="#00ffe0">
+          <animate attributeName="cy" dur="5.4s" values="78;62;78" repeatCount="indefinite"/>
+          <animate attributeName="opacity" dur="1.9s" values="0.1;0.9;0.2;0.8;0.1" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="310" cy="48" r="1.4" fill="#00ffe0">
+          <animate attributeName="cy" dur="6.2s" values="52;38;52" repeatCount="indefinite"/>
+          <animate attributeName="opacity" dur="2.4s" values="0.1;0.75;0.15;0.6;0.1" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="980" cy="74" r="1.9" fill="#00ffe0">
+          <animate attributeName="cy" dur="5.8s" values="82;66;82" repeatCount="indefinite"/>
+          <animate attributeName="opacity" dur="2.1s" values="0.1;0.9;0.2;0.8;0.1" repeatCount="indefinite"/>
+        </circle>
+      </g>
+
+      <!-- pink particles -->
+      <g filter="url(#glowPink)">
+        <circle cx="210" cy="92" r="1.7" fill="#ff7af0">
+          <animate attributeName="cy" dur="6.0s" values="98;84;98" repeatCount="indefinite"/>
+          <animate attributeName="opacity" dur="2.2s" values="0.1;0.85;0.2;0.75;0.1" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="740" cy="58" r="1.5" fill="#ff7af0">
+          <animate attributeName="cy" dur="6.6s" values="64;50;64" repeatCount="indefinite"/>
+          <animate attributeName="opacity" dur="2.7s" values="0.1;0.7;0.15;0.6;0.1" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="1080" cy="40" r="1.6" fill="#ff7af0">
+          <animate attributeName="cy" dur="6.8s" values="46;34;46" repeatCount="indefinite"/>
+          <animate attributeName="opacity" dur="2.5s" values="0.1;0.8;0.2;0.7;0.1" repeatCount="indefinite"/>
+        </circle>
+      </g>
+    </g>
+  </g>
+
+  <!-- Scanlines -->
   <g opacity="0.95">
     <rect width="1200" height="320" fill="url(#scan)">
       <animate attributeName="y" dur="1.6s" values="-6;0" repeatCount="indefinite"/>
     </rect>
   </g>
 
-  <rect x="0" y="0" width="1200" height="320" fill="url(#sweep)" opacity="0.9"/>
+  <!-- Global sweep -->
+  <rect x="0" y="0" width="1200" height="320" fill="url(#sweep)" opacity="0.82"/>
 
   <!-- Central HUD -->
   <g>
@@ -165,7 +359,6 @@
       <animate attributeName="opacity" dur="3.2s" values="1;1;0.92;1;0.96;1" repeatCount="indefinite"/>
     </text>
   </g>
-
   <g opacity="0.55">
     <text x="602" y="165" text-anchor="middle" class="title" font-size="84"
           fill="url(#neonPink)" filter="url(#glowPink)">
@@ -181,9 +374,8 @@
     <animate attributeName="opacity" dur="4.8s" values="0.78;0.95;0.82;0.92;0.78" repeatCount="indefinite"/>
   </text>
 
-  <!-- ICON-ONLY BADGES (small, no text) -->
+  <!-- Icon-only badges -->
   <g opacity="0.98">
-    <!-- Left icon badge (cyan) -->
     <g transform="translate(300 122)">
       <clipPath id="clipI1"><rect x="0" y="0" width="56" height="22" rx="9"/></clipPath>
       <g clip-path="url(#clipI1)">
@@ -194,15 +386,10 @@
         </rect>
       </g>
       <rect x="0" y="0" width="56" height="22" rx="9" fill="none" stroke="#00ffe0" stroke-opacity="0.58" filter="url(#glowCyan)"/>
-      <!-- bolt icon -->
       <circle cx="28" cy="11" r="7.2" fill="rgba(0,255,224,0.10)" stroke="#00ffe0" stroke-opacity="0.55"/>
-      <path d="M28 4.6 L24.8 11.2 H28 L26.9 17.6 L31.6 10.8 H28 L29.3 4.6 Z"
-            fill="#00ffe0" opacity="0.95"/>
-      <animateTransform attributeName="transform" type="translate" dur="4.2s"
-        values="300 122;300 122;301 122;300 122;300 122" repeatCount="indefinite"/>
+      <path d="M28 4.6 L24.8 11.2 H28 L26.9 17.6 L31.6 10.8 H28 L29.3 4.6 Z" fill="#00ffe0" opacity="0.95"/>
     </g>
 
-    <!-- Right icon badge (pink) -->
     <g transform="translate(844 122)">
       <clipPath id="clipI2"><rect x="0" y="0" width="56" height="22" rx="9"/></clipPath>
       <g clip-path="url(#clipI2)">
@@ -213,7 +400,6 @@
         </rect>
       </g>
       <rect x="0" y="0" width="56" height="22" rx="9" fill="none" stroke="#ff2bdc" stroke-opacity="0.55" filter="url(#glowPink)"/>
-      <!-- eye icon -->
       <circle cx="28" cy="11" r="7.2" fill="rgba(255,43,220,0.10)" stroke="#ff2bdc" stroke-opacity="0.5"/>
       <path d="M21.2 11 C23.3 7.6, 32.7 7.6, 34.8 11 C32.7 14.4, 23.3 14.4, 21.2 11 Z"
             fill="none" stroke="#ff7af0" stroke-width="1.7"/>
@@ -222,21 +408,5 @@
     </g>
   </g>
 
-  <!-- Bottom waveform -->
-  <path d="M120 270
-           C200 250, 260 290, 340 270
-           C420 250, 480 290, 560 270
-           C640 250, 700 290, 780 270
-           C860 250, 920 290, 1000 270
-           C1060 260, 1100 265, 1120 270"
-        fill="none" stroke="url(#neonCyan)" stroke-width="2.2" opacity="0.65" filter="url(#glowCyan)">
-    <animate attributeName="d" dur="3.3s" repeatCount="indefinite"
-      values="
-      M120 270 C200 250, 260 290, 340 270 C420 250, 480 290, 560 270 C640 250, 700 290, 780 270 C860 250, 920 290, 1000 270 C1060 260, 1100 265, 1120 270;
-      M120 270 C200 260, 260 285, 340 270 C420 260, 480 285, 560 270 C640 260, 700 285, 780 270 C860 260, 920 285, 1000 270 C1060 255, 1100 270, 1120 270;
-      M120 270 C200 250, 260 290, 340 270 C420 250, 480 290, 560 270 C640 250, 700 290, 780 270 C860 250, 920 290, 1000 270 C1060 260, 1100 265, 1120 270
-      "/>
-  </path>
-
-  <rect width="1200" height="320" fill="rgba(0,0,0,0.25)"/>
+  <rect width="1200" height="320" fill="rgba(0,0,0,0.18)"/>
 </svg>
