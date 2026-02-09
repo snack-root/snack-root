@@ -24,16 +24,22 @@
 
 ## 🧠 PROFILE
 
-Operating inside **enterprise networks and self-built labs**,  
-focused on **offensive tradecraft**, not tool collection.
+Operating inside **enterprise-grade networks and self-built offensive labs**,  
+with a long-term focus on **offensive security**, **Red Team tradecraft**,  
+and **hands-on adversary emulation**.
 
-I study how systems fail —
-how trust is abused,
-how identity breaks,
-and how small mistakes become full compromise.
+My work revolves around understanding how real systems fail in practice —  
+not just in theory.  
+I spend time breaking down **identity infrastructures**,  
+studying **trust relationships**, and tracing how **small configuration mistakes**  
+cascade into full domain compromise.
+
+I prefer environments that can fight back:  
+monitored networks, hardened hosts, and realistic constraints.
 
 Less noise.  
-More control.
+Less automation-for-show.  
+More **intent**, **precision**, and **control**.
 
 ---
 
@@ -46,11 +52,16 @@ More control.
   <img src="https://img.shields.io/badge/CTF%20Practice-ff00ff?style=for-the-badge&logo=hackthebox&logoColor=black"/>
 </p>
 
-- Adversary emulation  
-- AD abuse & privilege escalation  
-- Credential operations  
-- OPSEC-aware post exploitation  
-- Continuous learning through CTFs & labs  
+My primary areas of practice include:
+
+- **Adversary emulation** using realistic attack paths rather than isolated exploits  
+- **Active Directory abuse**, including Kerberos, NTLM, delegation, and trust misconfigurations  
+- **Credential operations**, from harvesting to reuse under OPSEC constraints  
+- **Post-exploitation workflows**, focusing on persistence, lateral movement, and control  
+- Continuous skill refinement through **CTFs**, labs, and failure analysis  
+
+Each technique is treated as part of a chain —  
+never as a standalone trick.
 
 ---
 
@@ -62,6 +73,15 @@ More control.
   <img src="https://img.shields.io/badge/Kali-ff2bdc?style=for-the-badge&logo=kalilinux&logoColor=black"/>
   <img src="https://img.shields.io/badge/Windows%20AD-00ffe0?style=for-the-badge&logo=windows&logoColor=black"/>
 </p>
+
+My workflow spans multiple platforms:
+
+- **Arch Linux & Pop!_OS** as daily drivers for development, research, and lab orchestration  
+- **Kali Linux** as a controlled offensive toolkit environment  
+- **Windows Active Directory domains** for realistic enterprise attack simulations  
+
+I regularly switch contexts between attacker and administrator  
+to better understand both sides of the system.
 
 Daily driver by day.  
 Attack surface by night.
@@ -79,8 +99,14 @@ Attack surface by night.
   <img src="https://img.shields.io/badge/Docker-00eaff?style=for-the-badge&logo=docker&logoColor=black"/>
 </p>
 
-Tools change.  
-Tradecraft stays.
+I treat tools as **instruments**, not identities.
+
+They are used to:
+- Validate hypotheses  
+- Speed up repeatable tasks  
+- Visualize complex relationships  
+
+When tools fail, fundamentals remain.
 
 ---
 
@@ -91,7 +117,13 @@ Tradecraft stays.
   <img src="https://img.shields.io/badge/Bash-ff2bdc?style=for-the-badge&logo=gnu-bash&logoColor=black"/>
 </p>
 
-Automation • Scripting • Lab building
+My technical stack supports:
+
+- **Automation** for reconnaissance, enumeration, and lab management  
+- **Scripting** for payload handling and workflow glue  
+- **Custom lab building** to reproduce real-world attack scenarios  
+
+The goal is repeatability, not shortcuts.
 
 ---
 
