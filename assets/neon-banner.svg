@@ -1,83 +1,242 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-label="Neon banner: SNACK">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#05050a"/>
-      <stop offset="55%" stop-color="#070717"/>
-      <stop offset="100%" stop-color="#04040c"/>
+      <stop offset="0" stop-color="#070612"/>
+      <stop offset="0.55" stop-color="#090a1e"/>
+      <stop offset="1" stop-color="#04040b"/>
     </linearGradient>
 
-    <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#00ffe0" stop-opacity="0"/>
-      <stop offset="35%" stop-color="#00ffe0" stop-opacity="0.9"/>
-      <stop offset="55%" stop-color="#ff2bdc" stop-opacity="0.85"/>
-      <stop offset="75%" stop-color="#00bfff" stop-opacity="0.8"/>
-      <stop offset="100%" stop-color="#00ffe0" stop-opacity="0"/>
-      <animate attributeName="x1" values="-1;1" dur="3.2s" repeatCount="indefinite"/>
-      <animate attributeName="x2" values="0;2"  dur="3.2s" repeatCount="indefinite"/>
+    <linearGradient id="neonCyan" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00ffe0"/>
+      <stop offset="0.5" stop-color="#00bfff"/>
+      <stop offset="1" stop-color="#00ffe0"/>
+    </linearGradient>
+    <linearGradient id="neonPink" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff2bdc"/>
+      <stop offset="0.5" stop-color="#ff6bff"/>
+      <stop offset="1" stop-color="#ff2bdc"/>
     </linearGradient>
 
     <filter id="glowCyan" x="-40%" y="-40%" width="180%" height="180%">
       <feGaussianBlur stdDeviation="3" result="b"/>
       <feColorMatrix in="b" type="matrix"
-        values="1 0 0 0 0
-                0 1 0 0 1
-                0 0 1 0 0.9
-                0 0 0 1 0" result="c"/>
+        values="0 0 0 0 0
+                0 0 0 0 1
+                0 0 0 0 1
+                0 0 0 0.9 0" result="c"/>
       <feMerge>
         <feMergeNode in="c"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
 
+    <filter id="glowPink" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="3.2" result="b"/>
+      <feColorMatrix in="b" type="matrix"
+        values="1 0 0 0 0.9
+                0 0 0 0 0
+                0 0 0 0 0.9
+                0 0 0 0.85 0" result="c"/>
+      <feMerge>
+        <feMergeNode in="c"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" />
+      <feColorMatrix type="matrix"
+        values="0 0 0 0 1
+                0 0 0 0 1
+                0 0 0 0 1
+                0 0 0 0.06 0"/>
+    </filter>
+
     <pattern id="scan" width="6" height="6" patternUnits="userSpaceOnUse">
-      <rect width="6" height="3" fill="#000000" opacity="0.10"/>
-      <rect y="3" width="6" height="3" fill="#000000" opacity="0.02"/>
+      <rect width="6" height="6" fill="transparent"/>
+      <rect y="0" width="6" height="1.5" fill="#ffffff" opacity="0.07"/>
     </pattern>
 
-    <filter id="grain">
-      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" seed="2" result="n">
-        <animate attributeName="seed" values="1;2;3;4;5;6;7;8" dur="1.2s" repeatCount="indefinite"/>
-      </feTurbulence>
-      <feColorMatrix type="matrix" in="n"
-        values="0 0 0 0 0.15
-                0 0 0 0 0.15
-                0 0 0 0 0.15
-                0 0 0 0.25 0" result="g"/>
-      <feComposite in="g" in2="SourceGraphic" operator="in"/>
+    <pattern id="grid" width="52" height="52" patternUnits="userSpaceOnUse">
+      <path d="M52 0H0V52" fill="none" stroke="#00ffe0" stroke-opacity="0.09" stroke-width="1"/>
+      <path d="M26 0V52M0 26H52" fill="none" stroke="#ff2bdc" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+
+    <filter id="glitch" x="-20%" y="-20%" width="140%" height="140%">
+      <feColorMatrix type="matrix" in="SourceGraphic" result="base"
+        values="1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 1 0"/>
+      <feOffset in="base" dx="-2" dy="0" result="r">
+        <animate attributeName="dx" dur="2.7s" values="0;-2;0;3;0;-1;0" repeatCount="indefinite"/>
+      </feOffset>
+      <feOffset in="base" dx="2" dy="0" result="b">
+        <animate attributeName="dx" dur="2.2s" values="0;2;0;-3;0;1;0" repeatCount="indefinite"/>
+      </feOffset>
+      <feColorMatrix in="r" type="matrix" result="rC"
+        values="1 0 0 0 0
+                0 0 0 0 0
+                0 0 0 0 0
+                0 0 0 0.9 0"/>
+      <feColorMatrix in="b" type="matrix" result="bC"
+        values="0 0 0 0 0
+                0 0 0 0 0
+                0 0 1 0 0
+                0 0 0 0.8 0"/>
+      <feMerge>
+        <feMergeNode in="rC"/>
+        <feMergeNode in="bC"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
     </filter>
+
+    <linearGradient id="shineGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.45" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.55" stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="0.65" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="sweep" x1="-0.2" y1="0" x2="1.2" y2="0">
+      <stop offset="0" stop-color="#00ffe0" stop-opacity="0"/>
+      <stop offset="0.45" stop-color="#00ffe0" stop-opacity="0.0"/>
+      <stop offset="0.55" stop-color="#00ffe0" stop-opacity="0.22"/>
+      <stop offset="0.65" stop-color="#ff2bdc" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#ff2bdc" stop-opacity="0"/>
+      <animate attributeName="x1" dur="3.4s" values="-1;1" repeatCount="indefinite"/>
+      <animate attributeName="x2" dur="3.4s" values="0;2" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <style>
+      .title {
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+        font-weight: 900;
+        letter-spacing: 10px;
+      }
+      .mono {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        letter-spacing: 1.6px;
+      }
+    </style>
   </defs>
 
-  <rect width="1200" height="300" rx="24" fill="url(#bg)"/>
-  <rect width="1200" height="300" rx="24" fill="url(#scan)" opacity="0.55"/>
-  <rect x="16" y="16" width="1168" height="268" rx="18" fill="none" stroke="#00ffe0" stroke-opacity="0.35" stroke-width="2"/>
-  <rect x="20" y="20" width="1160" height="260" rx="16" fill="none" stroke="#ff2bdc" stroke-opacity="0.22" stroke-width="2"/>
+  <rect width="1200" height="320" fill="url(#bg)"/>
+  <rect width="1200" height="320" filter="url(#noise)" opacity="0.9"/>
+  <rect width="1200" height="320" fill="url(#grid)" opacity="0.9"/>
 
-  <rect width="1200" height="300" rx="24" fill="url(#sweep)" opacity="0.28"/>
-
-  <g stroke="#00ffe0" stroke-opacity="0.55" stroke-width="3" stroke-linecap="round">
-    <path d="M58 56 H96"/><path d="M58 56 V94"/>
-    <path d="M1142 56 H1104"/><path d="M1142 56 V94"/>
-    <path d="M58 244 H96"/><path d="M58 244 V206"/>
-    <path d="M1142 244 H1104"/><path d="M1142 244 V206"/>
+  <g opacity="0.45">
+    <path d="M-50 300 L420 -20" stroke="url(#neonCyan)" stroke-width="2" opacity="0.55"/>
+    <path d="M120 360 L610 -20" stroke="url(#neonPink)" stroke-width="2" opacity="0.35"/>
+    <path d="M660 360 L1150 -20" stroke="url(#neonCyan)" stroke-width="2" opacity="0.35"/>
+    <path d="M820 360 L1280 -20" stroke="url(#neonPink)" stroke-width="2" opacity="0.25"/>
   </g>
 
-  <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace" text-anchor="middle">
-    <text x="600" y="135" font-size="70" fill="#00ffe0" filter="url(#glowCyan)" letter-spacing="8">⛧ SNACK ⛧</text>
-    <text x="600" y="190" font-size="20" fill="#7df9ff" opacity="0.95">RED TEAM • OFFENSIVE SECURITY • CTF</text>
-    <text x="600" y="222" font-size="14" fill="#ff2bdc" opacity="0.85">NEON DISTRICT // STEALTH-FIRST // SIGNAL: CLEAN</text>
+  <g opacity="0.9">
+    <path d="M40 50 H130" stroke="url(#neonCyan)" stroke-width="3" filter="url(#glowCyan)"/>
+    <path d="M40 50 V120" stroke="url(#neonCyan)" stroke-width="3" filter="url(#glowCyan)"/>
+    <path d="M1160 270 H1070" stroke="url(#neonPink)" stroke-width="3" filter="url(#glowPink)"/>
+    <path d="M1160 270 V200" stroke="url(#neonPink)" stroke-width="3" filter="url(#glowPink)"/>
   </g>
 
+  <g opacity="0.95">
+    <rect width="1200" height="320" fill="url(#scan)">
+      <animate attributeName="y" dur="1.6s" values="-6;0" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <rect x="0" y="0" width="1200" height="320" fill="url(#sweep)" opacity="0.9"/>
+
+  <!-- Central HUD -->
   <g>
-    <circle cx="78" cy="150" r="6" fill="#39ff14">
-      <animate attributeName="r" values="5;8;5" dur="1.6s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.6;1;0.6" dur="1.6s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="1122" cy="150" r="6" fill="#ff2bdc">
-      <animate attributeName="r" values="6;9;6" dur="1.9s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.55;1;0.55" dur="1.9s" repeatCount="indefinite"/>
-    </circle>
+    <rect x="210" y="78" width="780" height="164" rx="18"
+          fill="rgba(0,0,0,0.35)" stroke="url(#neonCyan)" stroke-opacity="0.55" stroke-width="2"
+          filter="url(#glowCyan)"/>
+    <rect x="230" y="96" width="740" height="128" rx="14"
+          fill="rgba(10,8,26,0.62)" stroke="url(#neonPink)" stroke-opacity="0.25" stroke-width="1"/>
   </g>
 
-  <rect width="1200" height="300" rx="24" filter="url(#grain)" opacity="0.22"/>
+  <!-- Title -->
+  <g filter="url(#glitch)">
+    <text x="600" y="165" text-anchor="middle" class="title" font-size="84"
+          fill="url(#neonCyan)" filter="url(#glowCyan)">
+      SNACK
+      <animate attributeName="opacity" dur="3.2s" values="1;1;0.92;1;0.96;1" repeatCount="indefinite"/>
+    </text>
+  </g>
+
+  <g opacity="0.55">
+    <text x="602" y="165" text-anchor="middle" class="title" font-size="84"
+          fill="url(#neonPink)" filter="url(#glowPink)">
+      SNACK
+      <animate attributeName="x" dur="2.9s" values="600;604;598;606;600" repeatCount="indefinite"/>
+      <animate attributeName="opacity" dur="1.7s" values="0.0;0.35;0.0;0.25;0.0" repeatCount="indefinite"/>
+    </text>
+  </g>
+
+  <!-- Tagline -->
+  <text x="600" y="214" text-anchor="middle" class="mono" font-size="18" fill="#b9fff6" opacity="0.9">
+    RED TEAM • OFFENSIVE SECURITY • CTF
+    <animate attributeName="opacity" dur="4.8s" values="0.78;0.95;0.82;0.92;0.78" repeatCount="indefinite"/>
+  </text>
+
+  <!-- ICON-ONLY BADGES (small, no text) -->
+  <g opacity="0.98">
+    <!-- Left icon badge (cyan) -->
+    <g transform="translate(300 122)">
+      <clipPath id="clipI1"><rect x="0" y="0" width="56" height="22" rx="9"/></clipPath>
+      <g clip-path="url(#clipI1)">
+        <rect x="0" y="0" width="56" height="22" fill="rgba(0,0,0,0.62)"/>
+        <rect x="0" y="0" width="56" height="22" fill="rgba(0,255,224,0.10)"/>
+        <rect x="-50" y="0" width="60" height="22" fill="url(#shineGrad)" opacity="0.55">
+          <animate attributeName="x" dur="2.6s" values="-70;90" repeatCount="indefinite"/>
+        </rect>
+      </g>
+      <rect x="0" y="0" width="56" height="22" rx="9" fill="none" stroke="#00ffe0" stroke-opacity="0.58" filter="url(#glowCyan)"/>
+      <!-- bolt icon -->
+      <circle cx="28" cy="11" r="7.2" fill="rgba(0,255,224,0.10)" stroke="#00ffe0" stroke-opacity="0.55"/>
+      <path d="M28 4.6 L24.8 11.2 H28 L26.9 17.6 L31.6 10.8 H28 L29.3 4.6 Z"
+            fill="#00ffe0" opacity="0.95"/>
+      <animateTransform attributeName="transform" type="translate" dur="4.2s"
+        values="300 122;300 122;301 122;300 122;300 122" repeatCount="indefinite"/>
+    </g>
+
+    <!-- Right icon badge (pink) -->
+    <g transform="translate(844 122)">
+      <clipPath id="clipI2"><rect x="0" y="0" width="56" height="22" rx="9"/></clipPath>
+      <g clip-path="url(#clipI2)">
+        <rect x="0" y="0" width="56" height="22" fill="rgba(0,0,0,0.62)"/>
+        <rect x="0" y="0" width="56" height="22" fill="rgba(255,43,220,0.10)"/>
+        <rect x="-55" y="0" width="65" height="22" fill="url(#shineGrad)" opacity="0.5">
+          <animate attributeName="x" dur="2.9s" values="-75;95" repeatCount="indefinite"/>
+        </rect>
+      </g>
+      <rect x="0" y="0" width="56" height="22" rx="9" fill="none" stroke="#ff2bdc" stroke-opacity="0.55" filter="url(#glowPink)"/>
+      <!-- eye icon -->
+      <circle cx="28" cy="11" r="7.2" fill="rgba(255,43,220,0.10)" stroke="#ff2bdc" stroke-opacity="0.5"/>
+      <path d="M21.2 11 C23.3 7.6, 32.7 7.6, 34.8 11 C32.7 14.4, 23.3 14.4, 21.2 11 Z"
+            fill="none" stroke="#ff7af0" stroke-width="1.7"/>
+      <circle cx="28" cy="11" r="2.4" fill="#ff7af0"/>
+      <animate attributeName="opacity" dur="2.7s" values="1;0.86;1;0.92;1" repeatCount="indefinite"/>
+    </g>
+  </g>
+
+  <!-- Bottom waveform -->
+  <path d="M120 270
+           C200 250, 260 290, 340 270
+           C420 250, 480 290, 560 270
+           C640 250, 700 290, 780 270
+           C860 250, 920 290, 1000 270
+           C1060 260, 1100 265, 1120 270"
+        fill="none" stroke="url(#neonCyan)" stroke-width="2.2" opacity="0.65" filter="url(#glowCyan)">
+    <animate attributeName="d" dur="3.3s" repeatCount="indefinite"
+      values="
+      M120 270 C200 250, 260 290, 340 270 C420 250, 480 290, 560 270 C640 250, 700 290, 780 270 C860 250, 920 290, 1000 270 C1060 260, 1100 265, 1120 270;
+      M120 270 C200 260, 260 285, 340 270 C420 260, 480 285, 560 270 C640 260, 700 285, 780 270 C860 260, 920 285, 1000 270 C1060 255, 1100 270, 1120 270;
+      M120 270 C200 250, 260 290, 340 270 C420 250, 480 290, 560 270 C640 250, 700 290, 780 270 C860 250, 920 290, 1000 270 C1060 260, 1100 265, 1120 270
+      "/>
+  </path>
+
+  <rect width="1200" height="320" fill="rgba(0,0,0,0.25)"/>
 </svg>
