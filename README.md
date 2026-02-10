@@ -53,8 +53,7 @@ My primary areas of practice include:
 - **Post-exploitation workflows**, focusing on persistence, lateral movement, and control  
 - Continuous skill refinement through **CTFs**, labs, and failure analysis  
 
-Each technique is treated as part of a chain —  
-never as a standalone trick.
+Each technique is treated as part of a chain — never as a standalone trick.
 
 ---
 
