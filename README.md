@@ -4,10 +4,6 @@
   <img src="./assets/neon-banner.svg" width="100%" alt="Neon HUD Banner - SNACK" />
 </p>
 
-<h1 align="center">
-  <span style="color:#00ffe0">⛧ 𝙎𝙉𝘼𝘾𝙆 ⛧</span>
-</h1>
-
 <p align="center">
   <em style="color:#7df9ff">
     Red Team Operator • Offensive Security • CTF
