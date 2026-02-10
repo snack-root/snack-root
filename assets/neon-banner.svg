@@ -87,8 +87,8 @@
                 0 0 0 0.045 0"/>
     </filter>
 
-    <!-- RGB split glitch -->
-    <filter id="glitch" x="-20%" y="-20%" width="140%" height="140%">
+    <!-- ===== RGB split glitch (base) ===== -->
+    <filter id="glitchRGB" x="-20%" y="-20%" width="140%" height="140%">
       <feColorMatrix type="matrix" in="SourceGraphic" result="base"
         values="1 0 0 0 0
                 0 1 0 0 0
@@ -117,7 +117,23 @@
       </feMerge>
     </filter>
 
-    <!-- ===== Text FX ===== -->
+    <!-- ===== Slice-glitch filter (horizontal tearing) ===== -->
+    <filter id="glitchSlices" x="-15%" y="-30%" width="130%" height="160%">
+      <feTurbulence type="turbulence" baseFrequency="0.9 0.06" numOctaves="1" seed="3" result="t">
+        <animate attributeName="seed" dur="3.6s" values="3;4;7;9;3" repeatCount="indefinite"/>
+        <animate attributeName="baseFrequency" dur="3.6s" values="0.9 0.06; 0.6 0.04; 1.0 0.08; 0.9 0.06" repeatCount="indefinite"/>
+      </feTurbulence>
+      <feColorMatrix in="t" type="matrix" result="t2"
+        values="1 0 0 0 0
+                1 0 0 0 0
+                1 0 0 0 0
+                0 0 0 1 0"/>
+      <feDisplacementMap in="SourceGraphic" in2="t2" scale="10" xChannelSelector="R" yChannelSelector="G">
+        <animate attributeName="scale" dur="4.2s" values="0;0;0;10;0;0;6;0;0" repeatCount="indefinite"/>
+      </feDisplacementMap>
+    </filter>
+
+    <!-- ===== Text shimmer ===== -->
     <filter id="txtShimmer" x="-10%" y="-20%" width="120%" height="140%">
       <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="1" seed="11" result="t">
         <animate attributeName="baseFrequency" dur="1.9s" values="0.014;0.024;0.016" repeatCount="indefinite"/>
@@ -148,15 +164,13 @@
       <rect y="0" width="6" height="1.2" fill="#fff" opacity="0.05"/>
     </pattern>
 
-    <!-- subtle HUD grid -->
     <pattern id="microGrid" width="22" height="22" patternUnits="userSpaceOnUse">
       <path d="M22 0H0V22" fill="none" stroke="#00FFE0" stroke-opacity="0.10" stroke-width="1" shape-rendering="crispEdges"/>
       <path d="M11 0V22 M0 11H22" fill="none" stroke="#FF2BD6" stroke-opacity="0.06" stroke-width="1" shape-rendering="crispEdges"/>
     </pattern>
 
-    <!-- "cmatrix" matrix-rain columns (very light) -->
+    <!-- "cmatrix" matrix-rain columns (light) -->
     <pattern id="cmatrix" width="48" height="140" patternUnits="userSpaceOnUse">
-      <!-- each column is a stack of glyphs (rects) -->
       <g opacity="0.9">
         <rect x="8"  y="0"   width="6" height="10" rx="2" fill="#39FF14" opacity="0.10"/>
         <rect x="8"  y="18"  width="6" height="10" rx="2" fill="#39FF14" opacity="0.16"/>
@@ -188,49 +202,55 @@
       @keyframes noisePulse { 0%,100%{opacity:.12;transform:translate(0,0);} 50%{opacity:.18;transform:translate(1px,-1px);} }
       @keyframes flickerFrame { 0%,100%{opacity:.94;} 48%{opacity:.78;} 52%{opacity:1;} 70%{opacity:.88;} }
 
+      /* hacker blink */
       @keyframes hackerBlink {
         0%,6%{opacity:1}
-        7%{opacity:.06}
+        7%{opacity:.05}
         8%{opacity:1}
         20%{opacity:1}
-        21%{opacity:.32}
+        21%{opacity:.28}
         22%{opacity:1}
         50%{opacity:1}
-        51%{opacity:.12}
+        51%{opacity:.10}
         52%{opacity:1}
         74%{opacity:1}
-        75%{opacity:.26}
+        75%{opacity:.22}
         76%{opacity:1}
         100%{opacity:1}
       }
 
+      /* jitter */
       @keyframes jitter {
         0%,100%{transform:translate(0,0)}
-        10%{transform:translate(0.8px,-0.5px)}
-        12%{transform:translate(-1px,0.4px)}
-        14%{transform:translate(0.9px,0.2px)}
-        16%{transform:translate(-0.6px,-0.4px)}
+        10%{transform:translate(1px,-0.6px)}
+        12%{transform:translate(-1.2px,0.5px)}
+        14%{transform:translate(1.1px,0.25px)}
+        16%{transform:translate(-0.8px,-0.5px)}
         30%{transform:translate(0,0)}
-        56%{transform:translate(0.7px,0.3px)}
-        58%{transform:translate(-0.9px,-0.2px)}
-        60%{transform:translate(0.8px,-0.1px)}
-        62%{transform:translate(-0.5px,0.3px)}
+        56%{transform:translate(0.9px,0.35px)}
+        58%{transform:translate(-1.1px,-0.25px)}
+        60%{transform:translate(1px,-0.15px)}
+        62%{transform:translate(-0.7px,0.35px)}
         80%{transform:translate(0,0)}
       }
 
+      /* snap x-glitch */
       @keyframes snapX {
         0%,72%{transform:translateX(0)}
-        73%{transform:translateX(1px)}
-        75%{transform:translateX(-2px)}
-        77%{transform:translateX(2px)}
+        73%{transform:translateX(1.2px)}
+        75%{transform:translateX(-2.4px)}
+        77%{transform:translateX(2.2px)}
         80%{transform:translateX(0)}
         100%{transform:translateX(0)}
       }
 
+      /* slice overlay opacity */
+      @keyframes sliceOn { 0%,68%{opacity:0} 70%{opacity:.9} 73%{opacity:0} 100%{opacity:0} }
+
       @keyframes streamX { 0%{transform:translateX(-280px);opacity:0;} 10%{opacity:.78;} 90%{opacity:.78;} 100%{transform:translateX(1480px);opacity:0;} }
       @keyframes blocks { 0%,100%{opacity:.16;} 18%{opacity:.95;} 34%{opacity:.28;} 57%{opacity:.85;} 76%{opacity:.35;} }
 
-      /* matrix rain motion */
+      /* matrix rain */
       @keyframes matrixFall { 0%{transform:translateY(-140px);opacity:0.0} 12%{opacity:0.55} 100%{transform:translateY(360px);opacity:0.0} }
       @keyframes matrixShift { 0%,100%{opacity:0.22} 50%{opacity:0.36} }
 
@@ -239,9 +259,11 @@
       .anim-flicker { animation: flickerFrame 3.8s ease-in-out infinite; }
 
       .snack-origin { transform-origin:600px 160px; }
-      .snack-blink { animation: hackerBlink 2.7s steps(1) infinite; }
-      .snack-jitter { animation: jitter 0.95s steps(1) infinite; }
-      .snack-snap { animation: snapX 4.8s steps(1) infinite; }
+      .snack-blink { animation: hackerBlink 2.6s steps(1) infinite; }
+      .snack-jitter { animation: jitter 0.9s steps(1) infinite; }
+      .snack-snap { animation: snapX 4.6s steps(1) infinite; }
+
+      .sliceBurst { animation: sliceOn 4.8s steps(1) infinite; }
 
       .anim-stream { animation: streamX 5.2s linear infinite; }
       .anim-blocks { animation: blocks 1.25s steps(1) infinite; }
@@ -261,8 +283,8 @@
   <rect width="1200" height="320" fill="url(#microGrid)" opacity="0.22"/>
 
   <!-- cmatrix rain (behind everything) -->
-  <g opacity="0.9">
-    <g class="matrixA"><rect x="0" y="-140" width="1200" height="460" fill="url(#cmatrix)" opacity="0.42"/></g>
+  <g opacity="0.95">
+    <g class="matrixA"><rect x="0"  y="-140" width="1200" height="460" fill="url(#cmatrix)" opacity="0.42"/></g>
     <g class="matrixB"><rect x="18" y="-140" width="1200" height="460" fill="url(#cmatrix)" opacity="0.34"/></g>
     <g class="matrixC"><rect x="36" y="-140" width="1200" height="460" fill="url(#cmatrix)" opacity="0.30"/></g>
     <g class="matrixD"><rect x="10" y="-140" width="1200" height="460" fill="url(#cmatrix)" opacity="0.24"/></g>
@@ -319,14 +341,6 @@
              H1040V210H1076V252H1140V196H1176V252
              H1200V236V320Z"
           fill="rgba(0,0,0,0.80)"/>
-
-    <g opacity="0.55" shape-rendering="crispEdges">
-      <path d="M312 232h14 M312 244h14 M312 256h14" stroke="#00FFE0" stroke-opacity="0.12" stroke-width="3"/>
-      <path d="M652 230h14 M652 242h14 M652 254h14" stroke="#39FF14" stroke-opacity="0.10" stroke-width="3"/>
-      <path d="M1042 234h14 M1042 246h14 M1042 258h14" stroke="#FF2BD6" stroke-opacity="0.08" stroke-width="3"/>
-      <animate attributeName="opacity" dur="2.0s" values="0.18;0.7;0.24;0.62;0.18" repeatCount="indefinite"/>
-    </g>
-
     <rect x="0" y="190" width="1200" height="130" fill="url(#haze)" opacity="0.62"/>
   </g>
 
@@ -340,14 +354,12 @@
     <rect x="255" y="84" width="690" height="134" rx="14"
           fill="rgba(10,12,22,0.58)" stroke="url(#neonMag)" stroke-opacity="0.22" stroke-width="1.1"/>
 
-    <!-- brackets + ticks -->
     <g opacity="0.65" filter="url(#glowCyan)" shape-rendering="crispEdges">
       <path d="M270 110h46 M270 110v28 M270 198h46 M270 198v-28" stroke="#00FFE0" stroke-opacity="0.22" stroke-width="2"/>
       <path d="M930 110h-46 M930 110v28 M930 198h-46 M930 198v-28" stroke="#00FFE0" stroke-opacity="0.22" stroke-width="2"/>
       <path d="M312 110v-10 M888 110v-10 M312 198v10 M888 198v10" stroke="#FF2BD6" stroke-opacity="0.14" stroke-width="2"/>
     </g>
 
-    <!-- HUD tiny numerics -->
     <g class="mono" font-size="10" opacity="0.8">
       <text x="288" y="108" fill="#B9FFF6" opacity="0.7">INTRUSION//HUD</text>
       <text x="810" y="108" fill="#FFD1FA" opacity="0.55">TRACE: ENABLED</text>
@@ -360,52 +372,63 @@
   <g clip-path="url(#clipPanel)" opacity="0.92">
     <path d="M240 236V206H280V178H305V206H334V190H360V206H398V168H430V206H468V184H494V206H520V174H548V206H594V162H630V206H674V178H700V206H742V170H774V206H820V182H850V206H900V160H936V206H960V196V236Z"
           fill="rgba(0,0,0,0.34)"/>
-    <g opacity="0.35" shape-rendering="crispEdges">
-      <path d="M398 180V206 M594 172V206 M900 172V206" stroke="#00FFE0" stroke-opacity="0.18" stroke-width="3"/>
-      <path d="M520 186V206 M742 186V206" stroke="#FF2BD6" stroke-opacity="0.14" stroke-width="3"/>
-    </g>
   </g>
 
   <!-- ===================================================== -->
-  <!-- TITLE: rung + blink + light -->
+  <!-- TITLE: GLITCH UPGRADE (RGB + SLICES + GHOST LAYERS) -->
   <!-- ===================================================== -->
   <g id="text" class="mono">
     <!-- depth shadow -->
     <text x="604" y="186" text-anchor="middle" font-size="110" font-weight="900" letter-spacing="14"
           fill="#000" opacity="0.35">SNACK</text>
 
-    <!-- main title group -->
-    <g class="snack-origin snack-blink snack-jitter snack-snap" filter="url(#glitch)">
-      <text x="600" y="182" text-anchor="middle" font-size="110" class="title"
+    <!-- cyan main (with RGB split) -->
+    <g class="snack-origin snack-blink snack-jitter snack-snap" filter="url(#glitchRGB)">
+      <text x="600" y="182" text-anchor="middle" font-size="110" font-weight="900" letter-spacing="14"
             fill="url(#neonCyan)" filter="url(#glowCyan)">SNACK</text>
 
-      <!-- inner HUD stroke -->
-      <text x="600" y="182" text-anchor="middle" font-size="110" class="title"
+      <!-- HUD stroke shimmer -->
+      <text x="600" y="182" text-anchor="middle" font-size="110" font-weight="900" letter-spacing="14"
             fill="none" stroke="#B9FFF6" stroke-opacity="0.22" stroke-width="2" paint-order="stroke"
             filter="url(#txtShimmer)">SNACK</text>
     </g>
 
-    <!-- magenta ghost -->
-    <text x="602" y="182" text-anchor="middle" font-size="110" class="title"
-          fill="url(#neonMag)" opacity="0.14" filter="url(#glowMag)">
+    <!-- magenta ghost layer that pops -->
+    <text x="602" y="182" text-anchor="middle" font-size="110" font-weight="900" letter-spacing="14"
+          fill="url(#neonMag)" opacity="0.10" filter="url(#glowMag)">
       SNACK
-      <animate attributeName="opacity" dur="2.6s"
-               values="0.14;0.14;0.03;0.14;0.14;0.07;0.14;0.14" repeatCount="indefinite"/>
+      <animate attributeName="opacity" dur="2.8s"
+               values="0.10;0.10;0.02;0.10;0.10;0.06;0.10;0.10" repeatCount="indefinite"/>
     </text>
+
+    <!-- lime ghost nudge -->
+    <g opacity="0.10" filter="url(#glowCyan)">
+      <text x="598" y="180" text-anchor="middle" font-size="110" font-weight="900" letter-spacing="14"
+            fill="url(#neonLime)">
+        SNACK
+        <animate attributeName="opacity" dur="4.4s" values="0;0;0.12;0;0;0.08;0;0" repeatCount="indefinite"/>
+      </text>
+    </g>
+
+    <!-- slice-tear burst overlay (rare) -->
+    <g class="sliceBurst" filter="url(#glitchSlices)">
+      <text x="600" y="182" text-anchor="middle" font-size="110" font-weight="900" letter-spacing="14"
+            fill="url(#neonCyan)" opacity="0.92">SNACK</text>
+    </g>
 
     <!-- moving specular highlight -->
     <g mask="url(#txtLightMask)" opacity="0.95">
-      <text x="600" y="182" text-anchor="middle" font-size="110" class="title"
-            fill="#ffffff" opacity="0.24" filter="url(#glowCyan)">SNACK</text>
-      <text x="600" y="182" text-anchor="middle" font-size="110" class="title"
-            fill="url(#neonLime)" opacity="0.14" filter="url(#glowCyan)">SNACK</text>
+      <text x="600" y="182" text-anchor="middle" font-size="110" font-weight="900" letter-spacing="14"
+            fill="#ffffff" opacity="0.22" filter="url(#glowCyan)">SNACK</text>
+      <text x="600" y="182" text-anchor="middle" font-size="110" font-weight="900" letter-spacing="14"
+            fill="url(#neonLime)" opacity="0.12" filter="url(#glowCyan)">SNACK</text>
     </g>
 
     <!-- hacker underline -->
     <g opacity="0.78">
       <text x="600" y="214" text-anchor="middle" font-size="12" fill="#39FF14" letter-spacing="6">
         _ _ _ _ _ _ _ _ _ _ _
-        <animate attributeName="opacity" dur="1.35s" values="0.12;0.85;0.22;0.74;0.12" repeatCount="indefinite"/>
+        <animate attributeName="opacity" dur="1.25s" values="0.10;0.86;0.20;0.72;0.10" repeatCount="indefinite"/>
       </text>
     </g>
   </g>
