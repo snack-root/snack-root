@@ -24,14 +24,11 @@ Operating inside **enterprise-grade networks and self-built offensive labs**,
 with a long-term focus on **offensive security**, **Red Team tradecraft**,  
 and **hands-on adversary emulation**.
 
-My work revolves around understanding how real systems fail in practice —  
-not just in theory.  
+My work revolves around understanding how real systems fail in practice — not just in theory.  
 I spend time breaking down **identity infrastructures**,  
-studying **trust relationships**, and tracing how **small configuration mistakes**  
-cascade into full domain compromise.
+studying **trust relationships**, and tracing how **small configuration mistakes**  cascade into full domain compromise.
 
-I prefer environments that can fight back:  
-monitored networks, hardened hosts, and realistic constraints.
+I prefer environments that can fight back: monitored networks, hardened hosts, and realistic constraints.
 
 Less noise.  
 Less automation-for-show.  
