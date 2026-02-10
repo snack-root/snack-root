@@ -24,16 +24,49 @@
       <stop offset="1" stop-color="#00FFE0"/>
     </linearGradient>
 
-    <!-- ===== Horizontal light sweep (background) ===== -->
+    <!-- 3D-ish face shading -->
+    <linearGradient id="faceGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#BFFFF8" stop-opacity="0.90"/>
+      <stop offset="0.35" stop-color="#00FFE0" stop-opacity="0.75"/>
+      <stop offset="0.7" stop-color="#00BFFF" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#0A0F1C" stop-opacity="0.0"/>
+    </linearGradient>
+
+    <linearGradient id="extrudeGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A0F1C" stop-opacity="0.92"/>
+      <stop offset="0.55" stop-color="#03222A" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#001012" stop-opacity="0.98"/>
+    </linearGradient>
+
+    <!-- ===== Background sweep ===== -->
     <linearGradient id="sweep" x1="-0.2" y1="0" x2="1.2" y2="0">
       <stop offset="0" stop-color="#00FFE0" stop-opacity="0"/>
       <stop offset="0.48" stop-color="#00FFE0" stop-opacity="0"/>
-      <stop offset="0.56" stop-color="#00FFE0" stop-opacity="0.22"/>
-      <stop offset="0.66" stop-color="#FF2BD6" stop-opacity="0.16"/>
+      <stop offset="0.56" stop-color="#00FFE0" stop-opacity="0.20"/>
+      <stop offset="0.66" stop-color="#FF2BD6" stop-opacity="0.14"/>
       <stop offset="1" stop-color="#FF2BD6" stop-opacity="0"/>
       <animate attributeName="x1" dur="3.4s" values="-1;1" repeatCount="indefinite"/>
       <animate attributeName="x2" dur="3.4s" values="0;2" repeatCount="indefinite"/>
     </linearGradient>
+
+    <!-- ===== Text-coupled sweep mask ===== -->
+    <!-- This moving band will be used as a mask over the TEXT,
+         so wherever it passes, the text gets a highlight + stronger glow. -->
+    <linearGradient id="beamGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0.40" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0.50" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="0.62" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+
+    <mask id="beamMask">
+      <rect width="1200" height="320" fill="black"/>
+      <!-- band width is tuned to cover the word only -->
+      <rect id="beam" x="-520" y="88" width="520" height="160" fill="url(#beamGrad)">
+        <animate attributeName="x" dur="3.4s" values="-520;1200" repeatCount="indefinite"/>
+      </rect>
+    </mask>
 
     <!-- ===== Scan band ===== -->
     <linearGradient id="scanBand" x1="0" y1="0" x2="0" y2="1">
@@ -44,14 +77,13 @@
       <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
     </linearGradient>
 
-    <!-- ===== Haze for depth ===== -->
     <linearGradient id="haze" x1="0" y1="1" x2="0" y2="0">
       <stop offset="0" stop-color="#000" stop-opacity="0"/>
       <stop offset="0.35" stop-color="#000" stop-opacity="0.35"/>
       <stop offset="1" stop-color="#000" stop-opacity="0.78"/>
     </linearGradient>
 
-    <!-- ===== Light-weight filters ===== -->
+    <!-- ===== Filters ===== -->
     <filter id="glowCyan" x="-25%" y="-25%" width="150%" height="150%">
       <feGaussianBlur stdDeviation="1.7" result="b"/>
       <feColorMatrix in="b" type="matrix"
@@ -59,6 +91,20 @@
                 0 0 0 0 1
                 0 0 0 0 1
                 0 0 0 0.65 0" result="c"/>
+      <feMerge>
+        <feMergeNode in="c"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- stronger glow used only under the moving beam -->
+    <filter id="glowCyanStrong" x="-35%" y="-35%" width="170%" height="170%">
+      <feGaussianBlur stdDeviation="3.2" result="b"/>
+      <feColorMatrix in="b" type="matrix"
+        values="0 0 0 0 0
+                0 0 0 0 1
+                0 0 0 0 1
+                0 0 0 0.85 0" result="c"/>
       <feMerge>
         <feMergeNode in="c"/>
         <feMergeNode in="SourceGraphic"/>
@@ -87,7 +133,7 @@
                 0 0 0 0.045 0"/>
     </filter>
 
-    <!-- ===== RGB split glitch (base) ===== -->
+    <!-- RGB split glitch -->
     <filter id="glitchRGB" x="-20%" y="-20%" width="140%" height="140%">
       <feColorMatrix type="matrix" in="SourceGraphic" result="base"
         values="1 0 0 0 0
@@ -117,11 +163,10 @@
       </feMerge>
     </filter>
 
-    <!-- ===== Slice-glitch filter (horizontal tearing) ===== -->
+    <!-- Slice-glitch (tearing) -->
     <filter id="glitchSlices" x="-15%" y="-30%" width="130%" height="160%">
       <feTurbulence type="turbulence" baseFrequency="0.9 0.06" numOctaves="1" seed="3" result="t">
         <animate attributeName="seed" dur="3.6s" values="3;4;7;9;3" repeatCount="indefinite"/>
-        <animate attributeName="baseFrequency" dur="3.6s" values="0.9 0.06; 0.6 0.04; 1.0 0.08; 0.9 0.06" repeatCount="indefinite"/>
       </feTurbulence>
       <feColorMatrix in="t" type="matrix" result="t2"
         values="1 0 0 0 0
@@ -132,31 +177,6 @@
         <animate attributeName="scale" dur="4.2s" values="0;0;0;10;0;0;6;0;0" repeatCount="indefinite"/>
       </feDisplacementMap>
     </filter>
-
-    <!-- ===== Text shimmer ===== -->
-    <filter id="txtShimmer" x="-10%" y="-20%" width="120%" height="140%">
-      <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="1" seed="11" result="t">
-        <animate attributeName="baseFrequency" dur="1.9s" values="0.014;0.024;0.016" repeatCount="indefinite"/>
-      </feTurbulence>
-      <feDisplacementMap in="SourceGraphic" in2="t" scale="2.4" xChannelSelector="R" yChannelSelector="G"/>
-    </filter>
-
-    <!-- Moving specular band over text -->
-    <linearGradient id="txtLight" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
-      <stop offset="0.42" stop-color="#fff" stop-opacity="0"/>
-      <stop offset="0.5" stop-color="#fff" stop-opacity="0.46"/>
-      <stop offset="0.56" stop-color="#fff" stop-opacity="0.18"/>
-      <stop offset="0.62" stop-color="#fff" stop-opacity="0"/>
-      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
-    </linearGradient>
-
-    <mask id="txtLightMask">
-      <rect width="1200" height="320" fill="black"/>
-      <rect x="-420" y="90" width="420" height="170" fill="url(#txtLight)">
-        <animate attributeName="x" dur="2.3s" values="-420;1200" repeatCount="indefinite"/>
-      </rect>
-    </mask>
 
     <!-- ===== Patterns ===== -->
     <pattern id="scanlines" width="6" height="6" patternUnits="userSpaceOnUse">
@@ -169,7 +189,7 @@
       <path d="M11 0V22 M0 11H22" fill="none" stroke="#FF2BD6" stroke-opacity="0.06" stroke-width="1" shape-rendering="crispEdges"/>
     </pattern>
 
-    <!-- "cmatrix" matrix-rain columns (light) -->
+    <!-- matrix-rain columns -->
     <pattern id="cmatrix" width="48" height="140" patternUnits="userSpaceOnUse">
       <g opacity="0.9">
         <rect x="8"  y="0"   width="6" height="10" rx="2" fill="#39FF14" opacity="0.10"/>
@@ -200,9 +220,7 @@
 
       @keyframes scanDown { 0%{transform:translateY(-90px);opacity:0;} 10%{opacity:.7;} 90%{opacity:.7;} 100%{transform:translateY(370px);opacity:0;} }
       @keyframes noisePulse { 0%,100%{opacity:.12;transform:translate(0,0);} 50%{opacity:.18;transform:translate(1px,-1px);} }
-      @keyframes flickerFrame { 0%,100%{opacity:.94;} 48%{opacity:.78;} 52%{opacity:1;} 70%{opacity:.88;} }
 
-      /* hacker blink */
       @keyframes hackerBlink {
         0%,6%{opacity:1}
         7%{opacity:.05}
@@ -219,7 +237,6 @@
         100%{opacity:1}
       }
 
-      /* jitter */
       @keyframes jitter {
         0%,100%{transform:translate(0,0)}
         10%{transform:translate(1px,-0.6px)}
@@ -234,7 +251,6 @@
         80%{transform:translate(0,0)}
       }
 
-      /* snap x-glitch */
       @keyframes snapX {
         0%,72%{transform:translateX(0)}
         73%{transform:translateX(1.2px)}
@@ -244,28 +260,22 @@
         100%{transform:translateX(0)}
       }
 
-      /* slice overlay opacity */
       @keyframes sliceOn { 0%,68%{opacity:0} 70%{opacity:.9} 73%{opacity:0} 100%{opacity:0} }
 
-      @keyframes streamX { 0%{transform:translateX(-280px);opacity:0;} 10%{opacity:.78;} 90%{opacity:.78;} 100%{transform:translateX(1480px);opacity:0;} }
       @keyframes blocks { 0%,100%{opacity:.16;} 18%{opacity:.95;} 34%{opacity:.28;} 57%{opacity:.85;} 76%{opacity:.35;} }
 
-      /* matrix rain */
       @keyframes matrixFall { 0%{transform:translateY(-140px);opacity:0.0} 12%{opacity:0.55} 100%{transform:translateY(360px);opacity:0.0} }
       @keyframes matrixShift { 0%,100%{opacity:0.22} 50%{opacity:0.36} }
 
       .anim-scan { animation: scanDown 3s linear infinite; }
       .anim-noise { animation: noisePulse 2.7s ease-in-out infinite; }
-      .anim-flicker { animation: flickerFrame 3.8s ease-in-out infinite; }
 
       .snack-origin { transform-origin:600px 160px; }
       .snack-blink { animation: hackerBlink 2.6s steps(1) infinite; }
       .snack-jitter { animation: jitter 0.9s steps(1) infinite; }
-      .snack-snap { animation: snapX 4.6s steps(1) infinite; }
+      .snack-snap  { animation: snapX 4.6s steps(1) infinite; }
 
       .sliceBurst { animation: sliceOn 4.8s steps(1) infinite; }
-
-      .anim-stream { animation: streamX 5.2s linear infinite; }
       .anim-blocks { animation: blocks 1.25s steps(1) infinite; }
 
       .matrixA { animation: matrixFall 2.7s linear infinite, matrixShift 3.6s ease-in-out infinite; }
@@ -282,7 +292,7 @@
   <rect width="1200" height="320" fill="url(#bg)"/>
   <rect width="1200" height="320" fill="url(#microGrid)" opacity="0.22"/>
 
-  <!-- cmatrix rain (behind everything) -->
+  <!-- cmatrix rain -->
   <g opacity="0.95">
     <g class="matrixA"><rect x="0"  y="-140" width="1200" height="460" fill="url(#cmatrix)" opacity="0.42"/></g>
     <g class="matrixB"><rect x="18" y="-140" width="1200" height="460" fill="url(#cmatrix)" opacity="0.34"/></g>
@@ -295,29 +305,11 @@
   <rect width="1200" height="320" fill="url(#scanlines)" opacity="0.9"/>
   <rect width="1200" height="320" fill="url(#sweep)" opacity="0.82"/>
 
-  <!-- Scan band -->
   <g class="anim-scan" opacity="0.78">
     <rect x="0" y="0" width="1200" height="74" fill="url(#scanBand)"/>
   </g>
 
-  <!-- ===================================================== -->
-  <!-- DATA STREAMS + GLITCH BLOCKS -->
-  <!-- ===================================================== -->
-  <g opacity="0.78">
-    <g class="anim-stream">
-      <path d="M40 62H420" stroke="#00FFE0" stroke-opacity="0.14" stroke-width="2"/>
-      <circle cx="420" cy="62" r="2.1" fill="#00FFE0" opacity="0.38"/>
-    </g>
-    <g class="anim-stream" style="animation-duration:6.0s; animation-delay:0.7s;">
-      <path d="M520 46H980" stroke="#FF2BD6" stroke-opacity="0.12" stroke-width="2"/>
-      <circle cx="980" cy="46" r="2.0" fill="#FF6BFF" opacity="0.30"/>
-    </g>
-    <g class="anim-stream" style="animation-duration:5.7s; animation-delay:1.2s;">
-      <path d="M120 292H720" stroke="#39FF14" stroke-opacity="0.10" stroke-width="2"/>
-      <circle cx="720" cy="292" r="2.0" fill="#39FF14" opacity="0.26"/>
-    </g>
-  </g>
-
+  <!-- glitch blocks -->
   <g opacity="0.72" class="anim-blocks">
     <rect x="84" y="98" width="26" height="6" fill="#00FFE0" opacity="0.18"/>
     <rect x="116" y="98" width="12" height="6" fill="#FF2BD6" opacity="0.16"/>
@@ -329,7 +321,7 @@
   </g>
 
   <!-- ===================================================== -->
-  <!-- CYBERPUNK CITY -->
+  <!-- CITY + HAZE -->
   <!-- ===================================================== -->
   <g id="city" opacity="0.98">
     <path d="M0 320V252
@@ -345,86 +337,67 @@
   </g>
 
   <!-- ===================================================== -->
-  <!-- MAIN HUD PANEL / FRAME -->
+  <!-- HUD PANEL -->
   <!-- ===================================================== -->
-  <g id="panel" class="anim-flicker">
+  <g id="panel">
     <rect x="235" y="66" width="730" height="170" rx="18"
-          fill="rgba(0,0,0,0.28)" stroke="url(#neonCyan)" stroke-opacity="0.62" stroke-width="2.1"
+          fill="rgba(0,0,0,0.26)" stroke="url(#neonCyan)" stroke-opacity="0.60" stroke-width="2.1"
           filter="url(#glowCyan)"/>
     <rect x="255" y="84" width="690" height="134" rx="14"
-          fill="rgba(10,12,22,0.58)" stroke="url(#neonMag)" stroke-opacity="0.22" stroke-width="1.1"/>
-
-    <g opacity="0.65" filter="url(#glowCyan)" shape-rendering="crispEdges">
-      <path d="M270 110h46 M270 110v28 M270 198h46 M270 198v-28" stroke="#00FFE0" stroke-opacity="0.22" stroke-width="2"/>
-      <path d="M930 110h-46 M930 110v28 M930 198h-46 M930 198v-28" stroke="#00FFE0" stroke-opacity="0.22" stroke-width="2"/>
-      <path d="M312 110v-10 M888 110v-10 M312 198v10 M888 198v10" stroke="#FF2BD6" stroke-opacity="0.14" stroke-width="2"/>
-    </g>
-
-    <g class="mono" font-size="10" opacity="0.8">
-      <text x="288" y="108" fill="#B9FFF6" opacity="0.7">INTRUSION//HUD</text>
-      <text x="810" y="108" fill="#FFD1FA" opacity="0.55">TRACE: ENABLED</text>
-      <text x="288" y="214" fill="#39FF14" opacity="0.58">PKT: 04A7 • RTT: 0.9ms • SIG: -47dB</text>
-      <text x="862" y="214" fill="#00FFE0" opacity="0.55">RX:OK</text>
-    </g>
-  </g>
-
-  <!-- skyline inside panel (behind text) -->
-  <g clip-path="url(#clipPanel)" opacity="0.92">
-    <path d="M240 236V206H280V178H305V206H334V190H360V206H398V168H430V206H468V184H494V206H520V174H548V206H594V162H630V206H674V178H700V206H742V170H774V206H820V182H850V206H900V160H936V206H960V196V236Z"
-          fill="rgba(0,0,0,0.34)"/>
+          fill="rgba(10,12,22,0.58)" stroke="url(#neonMag)" stroke-opacity="0.20" stroke-width="1.1"/>
   </g>
 
   <!-- ===================================================== -->
-  <!-- TITLE: GLITCH UPGRADE (RGB + SLICES + GHOST LAYERS) -->
+  <!-- 3D TITLE + TEXT-COUPLED LIGHT BEAM -->
   <!-- ===================================================== -->
   <g id="text" class="mono">
-    <!-- depth shadow -->
-    <text x="604" y="186" text-anchor="middle" font-size="110" font-weight="900" letter-spacing="14"
-          fill="#000" opacity="0.35">SNACK</text>
-
-    <!-- cyan main (with RGB split) -->
-    <g class="snack-origin snack-blink snack-jitter snack-snap" filter="url(#glitchRGB)">
-      <text x="600" y="182" text-anchor="middle" font-size="110" font-weight="900" letter-spacing="14"
-            fill="url(#neonCyan)" filter="url(#glowCyan)">SNACK</text>
-
-      <!-- HUD stroke shimmer -->
-      <text x="600" y="182" text-anchor="middle" font-size="110" font-weight="900" letter-spacing="14"
-            fill="none" stroke="#B9FFF6" stroke-opacity="0.22" stroke-width="2" paint-order="stroke"
-            filter="url(#txtShimmer)">SNACK</text>
+    <!-- extrude stack (3D depth) -->
+    <g opacity="0.92" filter="url(#glitchRGB)">
+      <text x="600" y="182" text-anchor="middle" font-size="110" class="title" fill="url(#extrudeGrad)" opacity="0.92" transform="translate(8,7)">SNACK</text>
+      <text x="600" y="182" text-anchor="middle" font-size="110" class="title" fill="url(#extrudeGrad)" opacity="0.84" transform="translate(7,6)">SNACK</text>
+      <text x="600" y="182" text-anchor="middle" font-size="110" class="title" fill="url(#extrudeGrad)" opacity="0.76" transform="translate(6,5)">SNACK</text>
+      <text x="600" y="182" text-anchor="middle" font-size="110" class="title" fill="url(#extrudeGrad)" opacity="0.68" transform="translate(5,4)">SNACK</text>
+      <text x="600" y="182" text-anchor="middle" font-size="110" class="title" fill="url(#extrudeGrad)" opacity="0.60" transform="translate(4,3)">SNACK</text>
+      <text x="600" y="182" text-anchor="middle" font-size="110" class="title" fill="url(#extrudeGrad)" opacity="0.52" transform="translate(3,2)">SNACK</text>
+      <text x="600" y="182" text-anchor="middle" font-size="110" class="title" fill="url(#extrudeGrad)" opacity="0.46" transform="translate(2,1)">SNACK</text>
     </g>
 
-    <!-- magenta ghost layer that pops -->
-    <text x="602" y="182" text-anchor="middle" font-size="110" font-weight="900" letter-spacing="14"
-          fill="url(#neonMag)" opacity="0.10" filter="url(#glowMag)">
+    <!-- base face (stable) -->
+    <g class="snack-origin snack-blink snack-jitter snack-snap">
+      <text x="600" y="182" text-anchor="middle" font-size="110" class="title"
+            fill="url(#neonCyan)" filter="url(#glowCyan)">SNACK</text>
+      <text x="600" y="182" text-anchor="middle" font-size="110" class="title"
+            fill="url(#faceGrad)" opacity="0.35">SNACK</text>
+    </g>
+
+    <!-- magenta rim light -->
+    <text x="600" y="182" text-anchor="middle" font-size="110" class="title"
+          fill="none" stroke="url(#neonMag)" stroke-opacity="0.34" stroke-width="2.2"
+          filter="url(#glowMag)" paint-order="stroke">
       SNACK
-      <animate attributeName="opacity" dur="2.8s"
-               values="0.10;0.10;0.02;0.10;0.10;0.06;0.10;0.10" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" dur="3.2s" values="0.12;0.40;0.18;0.46;0.12" repeatCount="indefinite"/>
     </text>
 
-    <!-- lime ghost nudge -->
-    <g opacity="0.10" filter="url(#glowCyan)">
-      <text x="598" y="180" text-anchor="middle" font-size="110" font-weight="900" letter-spacing="14"
-            fill="url(#neonLime)">
-        SNACK
-        <animate attributeName="opacity" dur="4.4s" values="0;0;0.12;0;0;0.08;0;0" repeatCount="indefinite"/>
-      </text>
-    </g>
-
-    <!-- slice-tear burst overlay (rare) -->
+    <!-- slice-tear burst -->
     <g class="sliceBurst" filter="url(#glitchSlices)">
-      <text x="600" y="182" text-anchor="middle" font-size="110" font-weight="900" letter-spacing="14"
+      <text x="600" y="182" text-anchor="middle" font-size="110" class="title"
             fill="url(#neonCyan)" opacity="0.92">SNACK</text>
     </g>
 
-    <!-- moving specular highlight -->
-    <g mask="url(#txtLightMask)" opacity="0.95">
-      <text x="600" y="182" text-anchor="middle" font-size="110" font-weight="900" letter-spacing="14"
-            fill="#ffffff" opacity="0.22" filter="url(#glowCyan)">SNACK</text>
-      <text x="600" y="182" text-anchor="middle" font-size="110" font-weight="900" letter-spacing="14"
-            fill="url(#neonLime)" opacity="0.12" filter="url(#glowCyan)">SNACK</text>
+    <!-- ===== THE KEY PART: beam affects the text where it passes ===== -->
+    <!-- Under the moving beam: add brighter highlight + stronger glow + slight color shift -->
+    <g mask="url(#beamMask)">
+      <text x="600" y="182" text-anchor="middle" font-size="110" class="title"
+            fill="#ffffff" opacity="0.34" filter="url(#glowCyanStrong)">SNACK</text>
+      <text x="600" y="182" text-anchor="middle" font-size="110" class="title"
+            fill="url(#neonLime)" opacity="0.22" filter="url(#glowCyanStrong)">SNACK</text>
+      <!-- tiny additional "spark" edge -->
+      <text x="600" y="182" text-anchor="middle" font-size="110" class="title"
+            fill="none" stroke="#ffffff" stroke-opacity="0.20" stroke-width="2.6"
+            filter="url(#glowCyanStrong)" paint-order="stroke">SNACK</text>
     </g>
 
-    <!-- hacker underline -->
+    <!-- underline -->
     <g opacity="0.78">
       <text x="600" y="214" text-anchor="middle" font-size="12" fill="#39FF14" letter-spacing="6">
         _ _ _ _ _ _ _ _ _ _ _
@@ -433,6 +406,5 @@
     </g>
   </g>
 
-  <!-- Vignette -->
   <rect width="1200" height="320" fill="rgba(0,0,0,0.18)"/>
 </svg>
