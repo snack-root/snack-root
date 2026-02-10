@@ -412,11 +412,6 @@
       SNACK
       <animate attributeName="opacity" dur="4.8s" values="0.0;0.0;0.18;0.0;0.0" repeatCount="indefinite"/>
     </text>
-
-    <text x="607" y="202" text-anchor="middle" font-size="18" font-weight="700"
-          fill="#B9FFF6" opacity="0.92">
-      Red Team Operator • Offensive Security • CTF Player
-    </text>
   </g>
 
   <!-- ===================================================== -->
