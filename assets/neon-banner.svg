@@ -36,13 +36,15 @@
       <stop offset="1" stop-color="#000" stop-opacity="0.78"/>
     </linearGradient>
 
+    <!-- ===== Horizontal light sweep (like old) ===== -->
     <linearGradient id="sweep" x1="-0.2" y1="0" x2="1.2" y2="0">
       <stop offset="0" stop-color="#00FFE0" stop-opacity="0"/>
-      <stop offset="0.52" stop-color="#00FFE0" stop-opacity="0.14"/>
-      <stop offset="0.62" stop-color="#FF2BD6" stop-opacity="0.10"/>
+      <stop offset="0.45" stop-color="#00FFE0" stop-opacity="0"/>
+      <stop offset="0.55" stop-color="#00FFE0" stop-opacity="0.22"/>
+      <stop offset="0.64" stop-color="#FF2BD6" stop-opacity="0.16"/>
       <stop offset="1" stop-color="#FF2BD6" stop-opacity="0"/>
-      <animate attributeName="x1" dur="3.6s" values="-1;1" repeatCount="indefinite"/>
-      <animate attributeName="x2" dur="3.6s" values="0;2" repeatCount="indefinite"/>
+      <animate attributeName="x1" dur="3.4s" values="-1;1" repeatCount="indefinite"/>
+      <animate attributeName="x2" dur="3.4s" values="0;2" repeatCount="indefinite"/>
     </linearGradient>
 
     <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0">
@@ -160,7 +162,7 @@
       .anim-noise { animation: noisePulse 2.7s ease-in-out infinite; }
       .anim-cursor { animation: cursorBlink 1s steps(1) infinite; }
       .radar-rot { animation: radarRot 4s linear infinite; transform-origin:185px 156px; }
-      .txt-glitch { animation: textGlitch 5.2s steps(1) infinite; transform-origin:600px 158px; }
+      .txt-glitch { animation: textGlitch 5.2s steps(1) infinite; transform-origin:607px 148px; }
     </style>
   </defs>
 
@@ -171,7 +173,9 @@
     <rect width="1200" height="320" fill="url(#bg)"/>
     <rect width="1200" height="320" filter="url(#noise)" opacity="0.18" class="anim-noise"/>
     <rect width="1200" height="320" fill="url(#scanlines)" opacity="0.9"/>
-    <rect width="1200" height="320" fill="url(#sweep)" opacity="0.20"/>
+
+    <!-- Horizontal light sweep overlay (as requested) -->
+    <rect width="1200" height="320" fill="url(#sweep)" opacity="0.78"/>
 
     <!-- Cleaner perspective grid (less dense) -->
     <g class="crisp" opacity="0.16" fill="none">
@@ -199,7 +203,7 @@
   </g>
 
   <!-- ===================================================== -->
-  <!-- CITY (kept behind panel) -->
+  <!-- CITY (behind panel) -->
   <!-- ===================================================== -->
   <g id="city" opacity="0.94">
     <path d="M0 320V252
@@ -245,37 +249,27 @@
              H1200V262V320Z"
           fill="rgba(0,0,0,0.90)"/>
 
-    <!-- extra details (still minimal) -->
     <g fill="none" stroke-width="3" opacity="0.20">
       <path d="M470 192V252" stroke="#00FFE0"/>
       <path d="M626 192V268" stroke="#39FF14"/>
       <path d="M910 188V252" stroke="#FF2BD6"/>
     </g>
 
-    <g opacity="0.82">
-      <path d="M306 238h12 M306 250h12 M306 262h12
-               M586 238h14 M586 250h14 M586 262h14
+    <g opacity="0.80">
+      <path d="M586 238h14 M586 250h14 M586 262h14
                M886 238h14 M886 250h14 M886 262h14"
-            stroke="#00FFE0" stroke-opacity="0.15" stroke-width="3"/>
+            stroke="#00FFE0" stroke-opacity="0.14" stroke-width="3"/>
       <animate attributeName="opacity" dur="2.2s" values="0.28;0.9;0.4;0.78;0.28" repeatCount="indefinite"/>
-    </g>
-
-    <g opacity="0.86">
-      <g transform="translate(948 212)" filter="url(#glowMag)">
-        <rect width="30" height="64" rx="8" fill="rgba(0,0,0,0.26)" stroke="url(#neonMag)" stroke-opacity="0.5"/>
-        <path d="M8 14H22 M8 28H22 M8 42H22 M8 56H22" stroke="#FF6BFF" stroke-opacity="0.28" stroke-width="2"/>
-        <animate attributeName="opacity" dur="2.0s" values="0.62;1;0.74;1;0.62" repeatCount="indefinite"/>
-      </g>
     </g>
 
     <rect x="0" y="190" width="1200" height="130" fill="url(#haze)" opacity="0.62"/>
   </g>
 
   <!-- ===================================================== -->
-  <!-- HUD (spaced, less cramped) -->
+  <!-- HUD -->
   <!-- ===================================================== -->
   <g id="hud">
-    <!-- Left radar (slightly higher + smaller) -->
+    <!-- Left radar -->
     <g opacity="0.95">
       <circle cx="185" cy="156" r="70" fill="rgba(0,0,0,0.20)" stroke="#00FFE0" stroke-opacity="0.34" stroke-width="2" filter="url(#glowCyan)" class="anim-flicker"/>
       <circle cx="185" cy="156" r="50" fill="none" stroke="#00FFE0" stroke-opacity="0.16" stroke-width="1.3"/>
@@ -292,7 +286,7 @@
       </circle>
     </g>
 
-    <!-- Central main panel (more breathing space) -->
+    <!-- Central main panel -->
     <g id="panel" class="anim-flicker">
       <rect x="245" y="64" width="725" height="168" rx="18"
             fill="rgba(0,0,0,0.32)" stroke="url(#neonCyan)" stroke-opacity="0.55" stroke-width="2"
@@ -303,9 +297,42 @@
         <path d="M270 106H330 M270 126H308" stroke="#00FFE0" stroke-opacity="0.20" stroke-width="2"/>
         <path d="M890 106H950 M912 126H950" stroke="#FF2BD6" stroke-opacity="0.16" stroke-width="2"/>
       </g>
+
+      <!-- Icons row (new) -->
+      <g transform="translate(294 92)" opacity="0.9">
+        <!-- shield -->
+        <g transform="translate(0 0)" filter="url(#glowCyan)">
+          <path d="M14 2 L26 6 V16 C26 22 20 26 14 28 C8 26 2 22 2 16 V6 Z"
+                fill="rgba(0,255,224,0.10)" stroke="#00FFE0" stroke-opacity="0.45" stroke-width="1.5"/>
+          <path d="M8 14 L12 18 L20 10" fill="none" stroke="#00FFE0" stroke-opacity="0.85" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+
+        <!-- terminal -->
+        <g transform="translate(44 0)" filter="url(#glowMag)">
+          <rect x="0" y="2" width="28" height="22" rx="5" fill="rgba(0,0,0,0.38)" stroke="#FF2BD6" stroke-opacity="0.45" stroke-width="1.5"/>
+          <path d="M6 10 L11 13 L6 16" fill="none" stroke="#FF6BFF" stroke-opacity="0.9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M13 17 H22" stroke="#FF6BFF" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round"/>
+        </g>
+
+        <!-- linux (simple penguin head-ish) -->
+        <g transform="translate(88 0)" filter="url(#glowCyan)">
+          <circle cx="14" cy="14" r="10" fill="rgba(0,255,224,0.08)" stroke="#00FFE0" stroke-opacity="0.35" stroke-width="1.5"/>
+          <circle cx="11" cy="13" r="1.2" fill="#B9FFF6" opacity="0.9"/>
+          <circle cx="17" cy="13" r="1.2" fill="#B9FFF6" opacity="0.9"/>
+          <path d="M14 15 C12.5 15.8, 15.5 15.8, 14 15 Z" fill="#39FF14" opacity="0.75"/>
+        </g>
+
+        <!-- network node -->
+        <g transform="translate(132 0)" filter="url(#glowMag)">
+          <circle cx="6" cy="18" r="3" fill="#FF6BFF" opacity="0.7"/>
+          <circle cx="22" cy="10" r="3" fill="#FF6BFF" opacity="0.7"/>
+          <circle cx="24" cy="22" r="3" fill="#FF6BFF" opacity="0.7"/>
+          <path d="M8.5 16.5 L19.5 11.5 M9 19 L21 21" stroke="#FF2BD6" stroke-opacity="0.35" stroke-width="1.6" stroke-linecap="round"/>
+        </g>
+      </g>
     </g>
 
-    <!-- Streams (few) -->
+    <!-- Streams -->
     <g id="streams" opacity="0.7">
       <g class="anim-stream">
         <path d="M260 52 H520" stroke="#00FFE0" stroke-opacity="0.14" stroke-width="2"/>
@@ -319,7 +346,7 @@
   </g>
 
   <!-- ===================================================== -->
-  <!-- Drone / Aircar (subtle, low) -->
+  <!-- Drone / Aircar -->
   <!-- ===================================================== -->
   <g id="air" opacity="0.9">
     <g transform="translate(-180 238)">
@@ -340,7 +367,7 @@
   </g>
 
   <!-- ===================================================== -->
-  <!-- FX: rain + particles (clipped) -->
+  <!-- FX: rain + particles -->
   <!-- ===================================================== -->
   <g id="fx" clip-path="url(#clipTopFx)">
     <g opacity="0.55">
@@ -351,7 +378,7 @@
         <animate attributeName="y" dur="1.28s" values="-60;0" repeatCount="indefinite"/>
       </rect>
     </g>
-    <g opacity="0.8">
+    <g opacity="0.78">
       <g filter="url(#glowCyan)">
         <circle cx="360" cy="56" r="1.6" fill="#00FFE0">
           <animate attributeName="cy" dur="6.2s" values="62;48;62" repeatCount="indefinite"/>
@@ -372,7 +399,7 @@
   </g>
 
   <!-- ===================================================== -->
-  <!-- TEXT (more spacing, "SNACK") -->
+  <!-- TEXT -->
   <!-- ===================================================== -->
   <g id="text" class="mono">
     <g class="txt-glitch" filter="url(#glitch)">
@@ -393,7 +420,7 @@
   </g>
 
   <!-- ===================================================== -->
-  <!-- BADGES (moved lower-right, smaller) -->
+  <!-- BADGES (smaller, bottom-right) -->
   <!-- ===================================================== -->
   <g id="badges" class="mono" font-size="11" font-weight="800" transform="translate(760 272)">
     <g class="anim-flicker">
