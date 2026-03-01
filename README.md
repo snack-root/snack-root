@@ -122,9 +122,6 @@ The goal is repeatability, not shortcuts.
 ## CONTACT
 
 <p align="center">
-  <a href="https://github.com/DangVinh2005">
-    <img src="https://img.shields.io/badge/GitHub-00ffe0?style=for-the-badge&logo=github&logoColor=black"/>
-  </a>
   <a href="https://www.linkedin.com/in/dangvinh05/">
     <img src="https://img.shields.io/badge/LinkedIn-ff2bdc?style=for-the-badge&logo=linkedin&logoColor=black"/>
   </a>
