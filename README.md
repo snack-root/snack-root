@@ -11,9 +11,9 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/ACTIVE-ff2bdc?style=for-the-badge&logo=ghost&logoColor=black"/>
+  <img src="https://img.shields.io/badge/ACTIVE-39ff14?style=for-the-badge&logo=ghost&logoColor=black"/>
   <img src="https://img.shields.io/badge/RED%20TEAM-00ffe0?style=for-the-badge&logo=kalilinux&logoColor=black"/>
-  <img src="https://img.shields.io/badge/STEALTH-39ff14?style=for-the-badge&logo=protonvpn&logoColor=black"/>
+  <img src="https://img.shields.io/badge/STEALTH-ff2bdc?style=for-the-badge&logo=protonvpn&logoColor=black"/>
 </p>
 
 ---
