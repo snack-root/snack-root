@@ -133,6 +133,3 @@ The goal is repeatability, not shortcuts.
   </a>
 </p>
 
----
-
-<sub style="color:#7df9ff">⛧ SNACK • Red Team • Neon City ⛧</sub>
