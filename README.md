@@ -18,7 +18,7 @@
 
 ---
 
-## 🧠 PROFILE
+## PROFILE
 
 Operating inside **enterprise-grade networks and self-built offensive labs**,  
 with a long-term focus on **offensive security**, **Red Team tradecraft**,  
@@ -36,7 +36,7 @@ More **intent**, **precision**, and **control**.
 
 ---
 
-## ⚔️ TRADECRAFT
+## TRADECRAFT
 
 <p align="center">
   <img src="https://img.shields.io/badge/Active%20Directory-00ffe0?style=for-the-badge&logo=windows&logoColor=black"/>
@@ -57,7 +57,7 @@ Each technique is treated as part of a chain — never as a standalone trick.
 
 ---
 
-## 🖥 ENVIRONMENT
+## ENVIRONMENT
 
 <p align="center">
   <img src="https://img.shields.io/badge/Arch-00eaff?style=for-the-badge&logo=archlinux&logoColor=black"/>
@@ -80,7 +80,7 @@ Attack surface by night.
 
 ---
 
-## 🧰 TOOLSET
+## TOOLSET
 
 <p align="center">
   <img src="https://img.shields.io/badge/Metasploit-ff2bdc?style=for-the-badge&logo=metasploit&logoColor=black"/>
@@ -102,7 +102,7 @@ When tools fail, fundamentals remain.
 
 ---
 
-## 🧬 STACK
+## STACK
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-00ffe0?style=for-the-badge&logo=python&logoColor=black"/>
@@ -119,7 +119,7 @@ The goal is repeatability, not shortcuts.
 
 ---
 
-## 🌐 CONTACT
+## CONTACT
 
 <p align="center">
   <a href="https://github.com/DangVinh2005">
