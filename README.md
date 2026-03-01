@@ -18,7 +18,7 @@
 
 ---
 
-## <p align="center"> PROFILE </p>
+## <p align="center">༺𓆩 PROFILE 𓆪༻</p>
 
 Operating inside **enterprise-grade networks and self-built offensive labs**,  
 with a long-term focus on **offensive security**, **Red Team tradecraft**,  
