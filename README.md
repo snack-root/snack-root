@@ -30,10 +30,6 @@ studying **trust relationships**, and tracing how **small configuration mistakes
 
 I prefer environments that can fight back: monitored networks, hardened hosts, and realistic constraints.
 
-Less noise.  
-Less automation-for-show.  
-More **intent**, **precision**, and **control**.
-
 ---
 
 ## <p align="center"> TRADECRAFT </p>
@@ -70,13 +66,10 @@ My workflow spans multiple platforms:
 
 - **Arch Linux & Pop!_OS** as daily drivers for development, research, and lab orchestration  
 - **Kali Linux** as a controlled offensive toolkit environment  
-- **Windows Active Directory domains** for realistic enterprise attack simulations  
+- **Windows Server** for realistic enterprise attack simulations  
 
 I regularly switch contexts between attacker and administrator  
 to better understand both sides of the system.
-
-Daily driver by day.  
-Attack surface by night.
 
 ---
 
@@ -84,8 +77,6 @@ Attack surface by night.
 
 <p align="center">
   <img src="https://img.shields.io/badge/Metasploit-ff2bdc?style=for-the-badge&logo=metasploit&logoColor=black"/>
-  <img src="https://img.shields.io/badge/Impacket-00ffe0?style=for-the-badge&logo=python&logoColor=black"/>
-  <img src="https://img.shields.io/badge/BloodHound-ff00ff?style=for-the-badge&logo=neo4j&logoColor=black"/>
   <img src="https://img.shields.io/badge/Nmap-7df9ff?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/Burp-ff8c00?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/Docker-00eaff?style=for-the-badge&logo=docker&logoColor=black"/>
@@ -97,8 +88,6 @@ They are used to:
 - Validate hypotheses  
 - Speed up repeatable tasks  
 - Visualize complex relationships  
-
-When tools fail, fundamentals remain.
 
 ---
 
