@@ -66,7 +66,8 @@ My workflow spans multiple platforms:
 
 - **Arch Linux & Pop!_OS** as daily drivers for development, research, and lab orchestration  
 - **Kali Linux** as a controlled offensive toolkit environment  
-- **Windows Server** for realistic enterprise attack simulations  
+- **Windows Server** for realistic enterprise attack simulations
+- **Pnet Lab** for config network
 
 I regularly switch contexts between attacker and administrator  
 to better understand both sides of the system.
