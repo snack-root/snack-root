@@ -6,7 +6,7 @@
 
 <p align="center">
   <em style="color:#7df9ff">
-    Red Team Operator • Offensive Security • CTF
+    Cryptography | CTF Player | Network Intern | Security Engineer
   </em>
 </p>
 
