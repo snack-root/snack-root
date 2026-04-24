@@ -18,7 +18,7 @@
 
 ---
 
-## <p align="center">༺𓆩 PROFILE 𓆪༻</p>
+## <p>PROFILE</p>
 
 Operating inside **enterprise-grade networks and self-built offensive labs**,  
 with a long-term focus on **offensive security**, **Red Team tradecraft**,  
@@ -32,7 +32,7 @@ I prefer environments that can fight back: monitored networks, hardened hosts, a
 
 ---
 
-## <p align="center"> TRADECRAFT </p>
+## <p> TRADECRAFT </p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Active%20Directory-00ffe0?style=for-the-badge&logo=windows&logoColor=black"/>
@@ -53,7 +53,7 @@ Each technique is treated as part of a chain — never as a standalone trick.
 
 ---
 
-## <p align="center"> ENVIRONMENT </p>
+## <p> ENVIRONMENT </p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Arch-00eaff?style=for-the-badge&logo=archlinux&logoColor=black"/>
@@ -74,7 +74,7 @@ to better understand both sides of the system.
 
 ---
 
-## <p align="center"> TOOLSET </p>
+## <p> TOOLSET </p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Metasploit-ff2bdc?style=for-the-badge&logo=metasploit&logoColor=black"/>
@@ -92,7 +92,7 @@ They are used to:
 
 ---
 
-## <p align="center"> STACK </p>
+## <p> STACK </p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-00ffe0?style=for-the-badge&logo=python&logoColor=black"/>
@@ -109,7 +109,7 @@ The goal is repeatability, not shortcuts.
 
 ---
 
-## <p align="center"> CONTACT </p>
+## <p> CONTACT </p>
 
 <p align="center">
   <a href="https://www.linkedin.com/in/dangvinh05/">
