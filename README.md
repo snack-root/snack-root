@@ -1,4 +1,4 @@
-<!-- 🌃 CYBERPUNK RED TEAM README :: OPERATOR PROFILE -->
+<!-- 🌃 CYBERPUNK SECURITY PROFILE :: OPERATOR MODE -->
 
 <p align="center">
   <img src="./assets/neon-banner.svg" width="100%" alt="Neon HUD Banner - SNACK" />
@@ -6,89 +6,90 @@
 
 <p align="center">
   <em style="color:#7df9ff">
-    Cryptography | CTF Player | Network Intern | Security Engineer
+    Network Security | System Engineering | Security Monitoring
   </em>
 </p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/ACTIVE-39ff14?style=for-the-badge&logo=ghost&logoColor=black"/>
-  <img src="https://img.shields.io/badge/RED%20TEAM-00ffe0?style=for-the-badge&logo=kalilinux&logoColor=black"/>
-  <img src="https://img.shields.io/badge/STEALTH-ff2bdc?style=for-the-badge&logo=protonvpn&logoColor=black"/>
+  <img src="https://img.shields.io/badge/SECURITY-00ffe0?style=for-the-badge&logo=shield&logoColor=black"/>
+  <img src="https://img.shields.io/badge/LAB-ff2bdc?style=for-the-badge&logo=linux&logoColor=black"/>
 </p>
 
 ---
 
-## <p>PROFILE</p>
+## <p> PROFILE </p>
 
-Operating inside **enterprise-grade networks and self-built offensive labs**,  
-with a long-term focus on **offensive security**, **Red Team tradecraft**,  
-and **hands-on adversary emulation**.
+I work with **real systems in controlled lab environments**, focusing on how networks and infrastructures operate under real conditions.
 
-My work revolves around understanding how real systems fail in practice — not just in theory.  
-I spend time breaking down **identity infrastructures**,  
-studying **trust relationships**, and tracing how **small configuration mistakes** cascade into full domain compromise.
+My approach is hands-on:
 
-I prefer environments that can fight back: monitored networks, hardened hosts, and realistic constraints.
+* building systems
+* monitoring behavior
+* analyzing how failures and misconfigurations impact security
+
+I am particularly interested in:
+
+* **network security and system monitoring**
+* **log analysis and anomaly detection**
+* **understanding system behavior beyond theory**
+
+I prefer environments that are observable, measurable, and reproducible.
 
 ---
 
-## <p> TRADECRAFT </p>
+## <p> FOCUS AREAS </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Active%20Directory-00ffe0?style=for-the-badge&logo=windows&logoColor=black"/>
-  <img src="https://img.shields.io/badge/Post--Exploitation-ff2bdc?style=for-the-badge&logo=mitre&logoColor=black"/>
-  <img src="https://img.shields.io/badge/Lateral%20Movement-7df9ff?style=for-the-badge&logo=mitre&logoColor=black"/>
-  <img src="https://img.shields.io/badge/CTF%20Practice-ff00ff?style=for-the-badge&logo=hackthebox&logoColor=black"/>
+  <img src="https://img.shields.io/badge/System%20Monitoring-00ffe0?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Network%20Security-7df9ff?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Log%20Analysis-ff2bdc?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/CTF%20Practice-ff00ff?style=for-the-badge&logo=hackthebox"/>
 </p>
 
-My primary areas of practice include:
+My current areas of practice include:
 
-- **Adversary emulation** using realistic attack paths rather than isolated exploits  
-- **Active Directory abuse**, including Kerberos, NTLM, delegation, and trust misconfigurations  
-- **Credential operations**, from harvesting to reuse under OPSEC constraints  
-- **Post-exploitation workflows**, focusing on persistence, lateral movement, and control  
-- Continuous skill refinement through **CTFs**, labs, and failure analysis  
-
-Each technique is treated as part of a chain — never as a standalone trick.
+* Monitoring and analyzing **system and network activity**
+* Working with **logs and telemetry** to understand system state
+* Exploring **security fundamentals through CTFs and lab scenarios**
+* Studying how **misconfigurations and weak controls** affect systems
 
 ---
 
 ## <p> ENVIRONMENT </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Arch-00eaff?style=for-the-badge&logo=archlinux&logoColor=black"/>
-  <img src="https://img.shields.io/badge/Pop!__OS-7df9ff?style=for-the-badge&logo=popos&logoColor=black"/>
+  <img src="https://img.shields.io/badge/Linux-00eaff?style=for-the-badge&logo=linux&logoColor=black"/>
   <img src="https://img.shields.io/badge/Kali-ff2bdc?style=for-the-badge&logo=kalilinux&logoColor=black"/>
-  <img src="https://img.shields.io/badge/Windows%20AD-00ffe0?style=for-the-badge&logo=windows&logoColor=black"/>
+  <img src="https://img.shields.io/badge/Windows-00ffe0?style=for-the-badge&logo=windows&logoColor=black"/>
+  <img src="https://img.shields.io/badge/Virtualization-7df9ff?style=for-the-badge&logo=vmware&logoColor=black"/>
 </p>
 
-My workflow spans multiple platforms:
+My workflow spans:
 
-- **Arch Linux & Pop!_OS** as daily drivers for development, research, and lab orchestration  
-- **Kali Linux** as a controlled offensive toolkit environment  
-- **Windows Server** for realistic enterprise attack simulations
-- **Pnet Lab** for config network
+* **Linux environments** for system operations and development
+* **Windows systems** for enterprise-related scenarios
+* **Virtualized labs (VMware / VirtualBox)** for testing and simulation
 
-I regularly switch contexts between attacker and administrator  
-to better understand both sides of the system.
+I regularly work across multiple environments to understand systems from different perspectives.
 
 ---
 
 ## <p> TOOLSET </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Metasploit-ff2bdc?style=for-the-badge&logo=metasploit&logoColor=black"/>
   <img src="https://img.shields.io/badge/Nmap-7df9ff?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/Burp-ff8c00?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/Docker-00eaff?style=for-the-badge&logo=docker&logoColor=black"/>
 </p>
 
-I treat tools as **instruments**, not identities.
+Tools are used to:
 
-They are used to:
-- Validate hypotheses  
-- Speed up repeatable tasks  
-- Visualize complex relationships  
+* support analysis
+* automate repeatable tasks
+* validate system behavior
+
+Focus remains on understanding systems rather than relying on tools.
 
 ---
 
@@ -99,13 +100,8 @@ They are used to:
   <img src="https://img.shields.io/badge/Bash-ff2bdc?style=for-the-badge&logo=gnu-bash&logoColor=black"/>
 </p>
 
-My technical stack supports:
-
-- **Automation** for reconnaissance, enumeration, and lab management  
-- **Scripting** for payload handling and workflow glue  
-- **Custom lab building** to reproduce real-world attack scenarios  
-
-The goal is repeatability, not shortcuts.
+* Python for automation, backend logic, and system interaction
+* Bash for scripting, system tasks, and environment control
 
 ---
 
