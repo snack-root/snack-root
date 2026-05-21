@@ -6,7 +6,7 @@
 
 <p align="center">
   <em style="color:#7df9ff">
-    Network Security | System Engineering | Security Monitoring
+    System Admin | Security Monitoring
   </em>
 </p>
 
