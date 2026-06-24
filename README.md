@@ -12,8 +12,8 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/ACTIVE-39ff14?style=for-the-badge&logo=ghost&logoColor=black"/>
-  <img src="https://img.shields.io/badge/SECURITY-00ffe0?style=for-the-badge&logo=shield&logoColor=black"/>
-  <img src="https://img.shields.io/badge/LAB-ff2bdc?style=for-the-badge&logo=linux&logoColor=black"/>
+  <img src="https://img.shields.io/badge/SYSTEM-00ffe0?style=for-the-badge&logo=shield&logoColor=black"/>
+  <img src="https://img.shields.io/badge/ROOT-ff2bdc?style=for-the-badge&logo=linux&logoColor=black"/>
 </p>
 
 ---
