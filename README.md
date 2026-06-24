@@ -48,7 +48,7 @@ Approach:
 
 <p align="center">
   <img src="https://img.shields.io/badge/Linux-00eaff?style=for-the-badge&logo=linux&logoColor=black"/>
-  <img src="https://img.shields.io/badge/WindowsServer-00ffe0?style=for-the-badge&logo=windows&logoColor=black"/>
+  <img src="https://img.shields.io/badge/Windows Server-00ffe0?style=for-the-badge&logo=windows&logoColor=black"/>
   <img src="https://img.shields.io/badge/Virtualization-7df9ff?style=for-the-badge"/>
 </p>
 
